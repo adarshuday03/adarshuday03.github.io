@@ -1235,6 +1235,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Inter, serif;
 }
 
+.font-mono {
+  font-family: Fira Code, monospace;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1603,4 +1607,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:opacity-100 {
     opacity: 1;
   }
+}
+
+/* Custom styles for better typography and spacing */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.font-serif {
+  font-family: 'Inter', serif;
+}
+
+.font-mono {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Improved spacing for better readability */
+p {
+  margin-bottom: 1rem;
+}
+
+.section-spacing {
+  margin-bottom: 2rem;
+}
+
+.card-spacing {
+  padding: 1.5rem;
+}
+
+/* Better hover effects */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Custom text sizes for better hierarchy */
+.text-hero {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.text-subhero {
+  font-size: 1.25rem;
+  font-weight: 300;
 }

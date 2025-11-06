@@ -1,86 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Name - Courses</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="assets/tw-config.js"></script>
-        <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/icon-profile.svg">
+  <link rel="mask-icon" href="images/mask-icon.svg" color="#94a3b8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <title>Courses | Your Name</title>
 </head>
-<body class="page-bg bg-slate-50 font-sans text-slate-800">
 
-    <div id="site-header"></div>
+<body class="bg-slate-100 flex flex-col mx-auto bg-[url('images/bg-full.png')] bg-repeat-x">
+  <!-- Outermost container -->
+  <div class="flex flex-col mx-auto space-y-2 max-w-4xl my-10">
+    <!-- Top-bar -->
+    <ul
+      class="flex flex-col items-center justify-center text-xl font-sans font-normal text-slate-500 dark:text-gray-400 -mb-3 md:flex-row md:justify-end">
+      <li class="mr-2">
+        <a href="index.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">home</a>
+      </li>
+      <li class="mr-2">
+        <a href="resume.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">resume</a>
+      </li>
+      <li class="mr-2">
+        <a href="courses.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500 active">courses</a>
+      </li>
+      <li class="mr-2">
+        <a href="experience.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">experience</a>
+      </li>
+      <li class="mr-2">
+        <a href="contact.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">contact</a>
+      </li>
+    </ul>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-12">
-        <div class="card p-6 sm:p-8 md:p-12">
+    <!-- Main Content -->
+    <div class="container flex flex-col space-y-6">
+      <!-- Page Header -->
+      <div
+        class="relative flex flex-col items-center justify-center pt-6 pb-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h1 class="text-2xl font-serif font-bold">Courses</h1>
+        <p class="text-sm font-serif text-slate-500 mt-2">Academic Coursework & Learning</p>
+      </div>
 
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                </div>
-                <div>
-                    <h1 class="text-3xl font-light text-slate-700">Courses</h1>
-                    <p class="text-sm text-slate-500 mt-1">Selected courses taught and workshops — short descriptions follow.</p>
-                </div>
+      <!-- Fall 2024 Courses -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Fall 2024</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Course 1 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Advanced Algorithms</h3>
+              <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs font-serif">CS 401</span>
             </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Advanced algorithmic techniques including dynamic programming, graph algorithms, and complexity analysis.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
 
-            <!-- wrap grid in a relative container and add a vertical divider on md+ -->
-            <div class="relative">
-                <div class="absolute hidden md:block left-1/2 top-8 bottom-8 w-px bg-slate-200 transform -translate-x-1/2"></div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                    <div class="space-y-8 pr-6 md:pr-8">
-                    <div>
-                        <h2 class="font-bold text-lg flex items-start">
-                            <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                            AM1100 - Engineering mechanics
-                        </h2>
-                        <p class="ml-5 text-slate-500 text-sm">Year - 2024(E), 25(O)</p>
-                        <p class="ml-5 mt-2 text-slate-700 text-sm">
-                            Introductory course covering statics and dynamics of rigid bodies. Emphasis on problem solving and modelling.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h2 class="font-bold text-lg flex items-start">
-                            <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                            AM5009 - Life of ubiquitous materials
-                        </h2>
-                        <p class="ml-5 text-slate-500 text-sm">Year - 2024(O), 25(O)</p>
-                        <p class="ml-5 mt-2 text-slate-700 text-sm">Project-based course on the science and behaviour of daily-use materials. Includes group projects and presentations.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <div>
-                        <h2 class="font-bold text-lg flex items-start">
-                            <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                            AM6023 - Geometry & mechanics of materials
-                        </h2>
-                        <p class="ml-5 text-slate-500 text-sm">Years - 2023(O), 24(O)</p>
-                        <p class="ml-5 mt-2 text-slate-700 text-sm">Graduate level course on geometry, calculus of variations and elasticity. Includes problem sets and short projects.</p>
-                    </div>
-
-                    <div>
-                        <h2 class="font-bold text-lg flex items-start">
-                            <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                            ID5060 - First principles tools in engineering
-                        </h2>
-                        <p class="ml-5 text-slate-500 text-sm">Year - 2023(O), 25(E)</p>
-                        <p class="ml-5 mt-2 text-slate-700 text-sm">Analytical tools to support engineering analysis and modelling; emphasis on clarity and reproducible examples.</p>
-                    </div>
-                    </div>
-
-                </div>
+          <!-- Course 2 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Machine Learning</h3>
+              <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs font-serif">CS 425</span>
             </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Introduction to ML concepts, supervised and unsupervised learning, neural networks, and practical applications.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A-</p>
+          </div>
 
+          <!-- Course 3 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Database Systems</h3>
+              <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs font-serif">CS 415</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Database design, SQL, NoSQL databases, transaction management, and query optimization.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Software Engineering</h3>
+              <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs font-serif">CS 420</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Software development lifecycle, design patterns, testing, agile methodologies, and team collaboration.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
         </div>
-    </main>
+      </div>
 
-    <div id="site-footer"></div>
-    <script src="assets/insert-partials.js"></script>
+      <!-- Spring 2024 Courses -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Spring 2024</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Course 1 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Data Structures</h3>
+              <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs font-serif">CS 301</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Arrays, linked lists, trees, graphs, hash tables, and their applications in problem-solving.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
 
+          <!-- Course 2 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Computer Networks</h3>
+              <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs font-serif">CS 330</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Network protocols, TCP/IP, routing algorithms, network security, and application layer protocols.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A-</p>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Operating Systems</h3>
+              <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs font-serif">CS 340</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Process management, memory management, file systems, and concurrency control.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: B+</p>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Web Development</h3>
+              <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs font-serif">CS 350</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              HTML, CSS, JavaScript, React, Node.js, and full-stack web application development.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fall 2023 Courses -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Fall 2023</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Course 1 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Discrete Mathematics</h3>
+              <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs font-serif">MATH 250</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Logic, set theory, combinatorics, graph theory, and mathematical proofs.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Object-Oriented Programming</h3>
+              <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs font-serif">CS 220</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              OOP concepts, design principles, inheritance, polymorphism, and Java programming.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A</p>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Linear Algebra</h3>
+              <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs font-serif">MATH 240</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              Vector spaces, matrices, eigenvalues, linear transformations, and applications.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: A-</p>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="p-4 bg-white rounded-xl border border-slate-300 hover:shadow duration-200">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-base font-serif font-bold">Computer Architecture</h3>
+              <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs font-serif">CS 270</span>
+            </div>
+            <p class="text-sm font-serif text-slate-600 leading-relaxed">
+              CPU design, memory hierarchy, instruction sets, pipelining, and performance optimization.
+            </p>
+            <p class="text-xs font-serif text-slate-500 mt-2">Grade: B+</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Online Courses & Certifications -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Online Courses & Certifications</h2>
+        
+        <div class="space-y-3">
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Deep Learning Specialization</h3>
+              <p class="text-sm font-serif text-slate-500">Coursera - deeplearning.ai | 2024</p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Full Stack Web Development</h3>
+              <p class="text-sm font-serif text-slate-500">Udemy | 2023</p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">AWS Cloud Practitioner</h3>
+              <p class="text-sm font-serif text-slate-500">Amazon Web Services | 2023</p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Data Structures and Algorithms</h3>
+              <p class="text-sm font-serif text-slate-500">LeetCode | Ongoing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-2">
+    <div
+      class="container flex flex-col items-center justify-center mx-auto space-y-16 md:flex-row md:space-y-0 md:items-center">
+      <div class="font-serif text-xs">&copy; Your Name | Last updated November 2025 | Theme developed with <a href="https://tailwindcss.com"
+          class="text-indigo-500 hover:text-color-indigo-800"><code>tailwindcss</code></a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

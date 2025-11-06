@@ -1,64 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Name - Home</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="assets/tw-config.js"></script>
-        <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/icon-profile.svg">
+  <link rel="mask-icon" href="images/mask-icon.svg" color="#94a3b8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <title>Your Name | Student Portfolio</title>
 </head>
-<body class="page-bg bg-slate-50 font-sans text-slate-800">
 
-    <div id="site-header"></div>
-
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-12">
-    <div class="card p-6 sm:p-8 md:p-12">
-
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                </div>
-                <div>
-                    <h1 class="text-3xl font-light text-slate-700">Welcome</h1>
-                    <p class="text-sm text-slate-500 mt-1">A concise intro and links to projects, publications, and contact.</p>
-                </div>
+<body class="bg-slate-100 flex flex-col mx-auto bg-[url('images/bg-full.png')] bg-repeat-x">
+  <!-- Outermost container -->
+  <div class="flex flex-col mx-auto space-y-2 max-w-4xl my-10">
+    <!-- Top-bar -->
+    <ul
+      class="flex flex-col items-center justify-center text-xl font-sans font-normal text-slate-500 dark:text-gray-400 -mb-3 md:flex-row md:justify-end">
+      <li class="mr-2">
+        <a href="index.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500 active">home</a>
+      </li>
+      <li class="mr-2">
+        <a href="resume.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">resume</a>
+      </li>
+      <li class="mr-2">
+        <a href="courses.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">courses</a>
+      </li>
+      <li class="mr-2">
+        <a href="experience.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">experience</a>
+      </li>
+      <li class="mr-2">
+        <a href="contact.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">contact</a>
+      </li>
+    </ul>
+    <!-- Container except top-bar -->
+    <div class="container flex flex-col space-y-10">
+      <!-- Top container with Photos, About me and Social media -->
+      <div
+        class="relative flex flex-col items-center justify-center pt-0 pb-10 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200 overflow-hidden">
+        <!-- Photo, Social media + About me -->
+        <div
+          class="flex flex-col items-center justify-center space-y-4 ml-4 mr-8 mt-4 md:flex-row md:items-start md:space-y-0 md:space-x-6">
+          <!-- Photo, Social media section -->
+          <section id="photo" class="flex flex-col items-center justify-center space-y-3 ml-6 mr-3">
+            <!-- Photo container -->
+            <div class="flex flex-col items-center justify-center">
+              <img src="images/profile-placeholder.svg" alt=""
+                class="m-4 w-40 h-40 md:max-w-48 md:max-h-48 transform hover:scale-105 hover:rounded-xl duration-200" />
+              <h2 href="" class="text-2xl whitespace-nowrap font-serif">Your Name</h2>
+              <p href="" class="text-xs font-serif">Student at Your University</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-700">
-                <div class="space-y-6">
-                    <h2 class="text-lg font-semibold text-slate-800">Featured Projects</h2>
-                    <article class="bg-white border border-slate-100 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-bold">Project Aurora</h3>
-                        <p class="text-sm text-slate-500 mt-1">A short description of a sample project. Uses small, focused bullets for highlights.</p>
-                        <ul class="mt-2 ml-4 list-disc text-sm text-slate-700">
-                            <li>Responsive static site using Tailwind.</li>
-                            <li>Simple design system and accessible markup.</li>
-                        </ul>
-                    </article>
-
-                    <article class="bg-white border border-slate-100 rounded-lg p-4 shadow-sm">
-                        <h3 class="font-bold">Data Viz Demo</h3>
-                        <p class="text-sm text-slate-500 mt-1">Interactive charts to explain model outputs and metrics.</p>
-                    </article>
-                </div>
-
-                <div class="space-y-6">
-                    <h2 class="text-lg font-semibold text-slate-800">Quick Links</h2>
-                    <ul class="space-y-3 text-sm text-slate-700">
-                        <li><a href="cv.html" class="text-primary hover:underline">Résumé (PDF)</a></li>
-                        <li><a href="courses.html" class="text-primary hover:underline">Courses taught</a></li>
-                        <li><a href="experience.html" class="text-primary hover:underline">Experience & roles</a></li>
-                        <li><a href="contact.html" class="text-primary hover:underline">Contact</a></li>
-                    </ul>
-                </div>
+            <!-- Social media container -->
+            <div
+              class="flex flex-row items-center justify-center bg-slate-300 h-8 w-max border-[1px] border-slate-400 rounded-full">
+              <!-- LinkedIn container -->
+              <div class="group">
+                <a href="https://linkedin.com/in/yourprofile">
+                  <img src="images/icon-linkedin.svg" alt="LinkedIn" class="h-[20px] ml-2 mr-1" />
+                </a>
+              </div>
+              <!-- GitHub container -->
+              <div class="group">
+                <a href="https://github.com/yourusername">
+                  <img src="images/icon-github.svg" alt="GitHub" class="h-4 m-1" />
+                </a>
+              </div>
+              <!-- Email container -->
+              <div class="group">
+                <a href="mailto:your.email@example.com">
+                  <img src="images/icon-email.svg" alt="Email me" class="h-4 m-1" />
+                </a>
+              </div>
+              <!-- CV container -->
+              <div class="group">
+                <a href="files/your-cv.pdf">
+                  <img src="images/icon-cv.svg" alt="Curriculum Vitae" class="h-4 ml-1 mr-2" />
+                </a>
+              </div>
             </div>
+          </section>
 
+          <section id="about-me">
+            <!-- About me Container -->
+            <div class="flex flex-col space-y-4 w-auto ml-10 my-4 md:m-4 md:mt-6 font-serif md:text-left">
+              <p class="text-sm text-left leading-relaxed">
+                I am currently a student at <a href="#"
+                  class="text-indigo-500 hover:text-color-indigo-800">
+                  Your University</a>, pursuing a degree in <strong>Your Major</strong>.
+                My interests include <strong>interest 1, interest 2, and interest 3</strong>.
+              </p>
+              <p class=" text-sm text-left leading-relaxed">
+                I am passionate about learning and applying my skills to real-world problems. Through my coursework
+                and projects, I have developed expertise in various areas including software development, 
+                data analysis, and problem-solving. Check out my <a
+                href="experience.html" class="text-indigo-500 hover:text-color-indigo-800">experience</a> and 
+                <a href="courses.html" class="text-indigo-500 hover:text-color-indigo-800">courses</a> to learn more.
+              </p>
+              <p class=" text-sm text-left leading-relaxed">
+                Outside of academics, I enjoy working on side projects and staying up-to-date with the latest 
+                technologies. Feel free to explore my work and reach out if you'd like to collaborate or 
+                discuss any opportunities. You can find more information on the <a
+                  href="contact.html" class="text-indigo-500 hover:text-color-indigo-800">contact</a> page.
+              </p>
+            </div>
+          </section>
         </div>
-    </main>
+        <!-- News section -->
+        <div
+          class="flex flex-col items-center justify-center space-y-4 ml-14 mr-20 my-10 py-2 md:flex-row md:items-baseline md:space-y-0 md:space-x-6">
+          <div class="relative flex flex-row items-center justify-center space-x-2 md:flex-row md:space-x-2">
+            <div
+              class="absolute flex flex-row items-center justify-center px-2 py-1 font-serif text-sm text-white bg-indigo-500 rounded-full md:ml-48 md:-mt-20 md:space-x-2 sm:mt-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.25"
+                stroke="#fffffb" class="w-6 h-6 opacity-60">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+              </svg>
+              <p class="pr-2">Updates</p>
+            </div>
+          </div>
+          <!-- News items container -->
+          <div class="bg-slate-300 m-4 py-6 px-6 space-y-2 shadow-lg border-[1px] border-slate-400 rounded-2xl">
+            <!-- Update 1 -->
+            <div class="flex items-baseline justify-center space-x-3 font-serif text-xs max-w-md">
+              <div class="mx-1 w-2 h-2 bg-indigo-500 rounded-full"></div>
+              <p class="m-0 w-full">
+                <strong>November 2025:</strong> Started working on my personal portfolio website! 
+                Excited to share my journey and projects here.
+              </p>
+            </div>
+            <!-- Update 2 -->
+            <div class="flex items-baseline justify-center space-x-3 font-serif text-xs max-w-md">
+              <div class="mx-1 w-2 h-2 bg-indigo-500 rounded-full"></div>
+              <p class="m-0 w-full">
+                Currently enrolled in <strong>exciting courses</strong> this semester. Check out the 
+                <a href="courses.html" class="text-indigo-500 hover:text-color-indigo-800">courses page</a> 
+                for more details.
+              </p>
+            </div>
+            <!-- Update 3 -->
+            <div class="flex items-baseline justify-center space-x-3 font-serif text-xs max-w-md">
+              <div class="mx-1 w-2 h-2 bg-indigo-500 rounded-full"></div>
+              <p class="m-0 w-full">
+                Looking for <strong>internship opportunities</strong> in summer 2026. Feel free to 
+                <a href="contact.html" class="text-indigo-500 hover:text-color-indigo-800">reach out</a> 
+                if you have any opportunities or collaborations in mind.
+              </p>
+            </div>
+            <!-- Update 4 -->
+            <div class="flex items-baseline justify-center space-x-3 font-serif text-xs max-w-md">
+              <div class="mx-1 w-2 h-2 bg-indigo-500 rounded-full"></div>
+              <p class="m-0 w-full">
+                Completed several interesting projects this year. Visit my 
+                <a href="experience.html" class="text-indigo-500 hover:text-color-indigo-800">experience page</a> 
+                to learn more about my work.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Logo/Links section -->
+        <div class="flex flex-col items-center justify-between space-y-10 md:flex-row md:space-y-0 md:space-x-24">
+          <!-- You can add logos or additional links here -->
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div id="site-footer"></div>
-    <script src="assets/insert-partials.js"></script>
 
+  <footer class="py-2">
+    <div
+      class="container flex flex-col items-center justify-center mx-auto space-y-16 md:flex-row md:space-y-0 md:items-center">
+      <div class="font-serif text-xs">&copy; Your Name | Last updated November 2025 | Theme developed with <a href="https://tailwindcss.com"
+          class="text-indigo-500 hover:text-color-indigo-800"><code>tailwindcss</code></a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

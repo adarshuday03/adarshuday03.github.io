@@ -1,59 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Name - Experience</title>
-                <script src="https://cdn.tailwindcss.com"></script>
-                <script src="assets/tw-config.js"></script>
-                <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/icon-profile.svg">
+  <link rel="mask-icon" href="images/mask-icon.svg" color="#94a3b8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <title>Experience | Your Name</title>
 </head>
-<body class="page-bg bg-slate-50 font-sans text-slate-800">
 
-    <div id="site-header"></div>
+<body class="bg-slate-100 flex flex-col mx-auto bg-[url('images/bg-full.png')] bg-repeat-x">
+  <!-- Outermost container -->
+  <div class="flex flex-col mx-auto space-y-2 max-w-4xl my-10">
+    <!-- Top-bar -->
+    <ul
+      class="flex flex-col items-center justify-center text-xl font-sans font-normal text-slate-500 dark:text-gray-400 -mb-3 md:flex-row md:justify-end">
+      <li class="mr-2">
+        <a href="index.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">home</a>
+      </li>
+      <li class="mr-2">
+        <a href="resume.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">resume</a>
+      </li>
+      <li class="mr-2">
+        <a href="courses.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">courses</a>
+      </li>
+      <li class="mr-2">
+        <a href="experience.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500 active">experience</a>
+      </li>
+      <li class="mr-2">
+        <a href="contact.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">contact</a>
+      </li>
+    </ul>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-12">
-    <div class="card p-6 sm:p-8 md:p-12">
+    <!-- Main Content -->
+    <div class="container flex flex-col space-y-6">
+      <!-- Page Header -->
+      <div
+        class="relative flex flex-col items-center justify-center pt-6 pb-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h1 class="text-2xl font-serif font-bold">Experience</h1>
+        <p class="text-sm font-serif text-slate-500 mt-2">Work, Research & Projects</p>
+      </div>
 
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </div>
-                <div>
-                    <h1 class="text-3xl font-light text-slate-700">Experience</h1>
-                    <p class="text-sm text-slate-500 mt-1">Roles, responsibilities, and selected accomplishments.</p>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="bg-white border border-slate-100 rounded-lg p-4">
-                    <h2 class="font-bold text-lg flex items-start">
-                        <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                        Senior Frontend Engineer — Acme Labs
-                    </h2>
-                    <p class="ml-5 text-slate-500 text-sm">Jan 2024 - Present</p>
-                    <p class="ml-5 mt-2 text-slate-700 text-sm">Lead the front-end team building accessible UI components and improving performance across multiple products.</p>
-                    <ul class="ml-10 mt-2 list-disc list-outside text-slate-700 text-sm">
-                        <li>Designed component library used across three products.</li>
-                        <li>Reduced bundle size by 25% through optimization work.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-white border border-slate-100 rounded-lg p-4">
-                    <h2 class="font-bold text-lg flex items-start">
-                        <span class="inline-block bg-primary w-2 h-2 rounded-full mr-3 mt-2"></span>
-                        Software Engineer — Example Co.
-                    </h2>
-                    <p class="ml-5 text-slate-500 text-sm">May 2021 - Dec 2023</p>
-                    <p class="ml-5 mt-2 text-slate-700 text-sm">Worked on web applications, shipping features end-to-end and collaborating with design and backend teams.</p>
-                </div>
-            </div>
-
+      <!-- Work Experience Section -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Work Experience</h2>
+        
+        <!-- Experience 1 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Software Engineering Intern</h3>
+            <p class="text-sm font-serif text-slate-500">Summer 2024</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mb-3">Tech Company Name | City, State</p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-2 text-gray-600 leading-relaxed">
+            <li>Developed and maintained web applications using React and Node.js</li>
+            <li>Collaborated with cross-functional teams to implement new features</li>
+            <li>Improved application performance by 30% through code optimization</li>
+            <li>Participated in agile development process including daily standups and sprint planning</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">MongoDB</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">Git</span>
+          </div>
         </div>
-    </main>
 
-    <div id="site-footer"></div>
-    <script src="assets/insert-partials.js"></script>
+        <!-- Experience 2 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Teaching Assistant</h3>
+            <p class="text-sm font-serif text-slate-500">Fall 2023 - Present</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mb-3">University Computer Science Department</p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-2 text-gray-600 leading-relaxed">
+            <li>Assisted in teaching Introduction to Programming course with 100+ students</li>
+            <li>Held weekly office hours to help students with assignments and concepts</li>
+            <li>Graded assignments and provided constructive feedback</li>
+            <li>Created supplemental learning materials and coding examples</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">Python</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">Teaching</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">Mentoring</span>
+          </div>
+        </div>
 
+        <!-- Experience 3 -->
+        <div class="mb-4 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Freelance Web Developer</h3>
+            <p class="text-sm font-serif text-slate-500">2023 - Present</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mb-3">Self-Employed</p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-2 text-gray-600 leading-relaxed">
+            <li>Built custom websites for small businesses and local organizations</li>
+            <li>Provided ongoing maintenance and technical support</li>
+            <li>Managed client relationships and project timelines</li>
+            <li>Implemented responsive designs and SEO best practices</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">HTML/CSS</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">JavaScript</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">WordPress</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">SEO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Experience Section -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Research Experience</h2>
+        
+        <!-- Research 1 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Undergraduate Research Assistant</h3>
+            <p class="text-sm font-serif text-slate-500">Summer 2023</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mb-3">Machine Learning Lab | Your University</p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-2 text-gray-600 leading-relaxed">
+            <li>Conducted research on natural language processing applications</li>
+            <li>Implemented and tested various machine learning algorithms</li>
+            <li>Analyzed large datasets and presented findings to research team</li>
+            <li>Co-authored research paper submitted to conference</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">Python</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">TensorFlow</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">NLP</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Notable Projects</h2>
+        
+        <!-- Project 1 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">E-Commerce Platform</h3>
+            <a href="#" class="text-sm font-serif text-indigo-500 hover:underline">View Project →</a>
+          </div>
+          <p class="text-sm font-serif text-gray-600 mb-3 leading-relaxed">
+            Built a full-stack e-commerce web application with user authentication, product management, 
+            shopping cart functionality, and payment integration.
+          </p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-1 text-gray-600 leading-relaxed ml-4">
+            <li>Implemented RESTful API with Express.js</li>
+            <li>Designed responsive UI with React and Tailwind CSS</li>
+            <li>Integrated Stripe payment gateway</li>
+            <li>Deployed on AWS with CI/CD pipeline</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">Express</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">PostgreSQL</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">AWS</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">AI Chatbot</h3>
+            <a href="#" class="text-sm font-serif text-indigo-500 hover:underline">View Project →</a>
+          </div>
+          <p class="text-sm font-serif text-gray-600 mb-3 leading-relaxed">
+            Developed an intelligent chatbot using natural language processing to answer 
+            frequently asked questions for a university department.
+          </p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-1 text-gray-600 leading-relaxed ml-4">
+            <li>Trained custom NLP model on department-specific data</li>
+            <li>Implemented conversation flow and context management</li>
+            <li>Created web interface for user interaction</li>
+            <li>Achieved 85% accuracy in intent classification</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">Python</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">NLP</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">Flask</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">Machine Learning</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="mb-6 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Task Management App</h3>
+            <a href="#" class="text-sm font-serif text-indigo-500 hover:underline">View Project →</a>
+          </div>
+          <p class="text-sm font-serif text-gray-600 mb-3 leading-relaxed">
+            Created a collaborative task management application with real-time updates, 
+            team collaboration features, and project tracking.
+          </p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-1 text-gray-600 leading-relaxed ml-4">
+            <li>Implemented real-time sync using WebSockets</li>
+            <li>Built drag-and-drop kanban board interface</li>
+            <li>Added team collaboration and permission controls</li>
+            <li>Mobile-responsive design for cross-platform use</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">React</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">Node.js</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">Socket.io</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="mb-4 p-4 bg-white rounded-xl border border-slate-300">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+            <h3 class="text-base font-serif font-bold">Personal Portfolio Website</h3>
+            <a href="#" class="text-sm font-serif text-indigo-500 hover:underline">View Project →</a>
+          </div>
+          <p class="text-sm font-serif text-gray-600 mb-3 leading-relaxed">
+            Designed and developed this personal portfolio website to showcase my work, 
+            skills, and academic journey.
+          </p>
+          <ul class="list-disc list-inside text-sm font-serif space-y-1 text-gray-600 leading-relaxed ml-4">
+            <li>Clean, modern design with responsive layout</li>
+            <li>Optimized for performance and SEO</li>
+            <li>Deployed on GitHub Pages</li>
+            <li>Accessible and user-friendly interface</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2 py-1 bg-pink-400 text-pink-800 rounded-full text-xs">HTML</span>
+            <span class="px-2 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs">Tailwind CSS</span>
+            <span class="px-2 py-1 bg-lime-400 text-lime-800 rounded-full text-xs">JavaScript</span>
+            <span class="px-2 py-1 bg-violet-400 text-violet-800 rounded-full text-xs">GitHub Pages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership & Extracurricular -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Leadership & Activities</h2>
+        
+        <div class="space-y-4">
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">President, Computer Science Club</h3>
+              <p class="text-sm font-serif text-slate-500">2024 - Present</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed text-gray-600">
+                Lead weekly workshops, organize hackathons, and coordinate guest speaker events
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Volunteer, Code for Community</h3>
+              <p class="text-sm font-serif text-slate-500">2023 - Present</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed text-gray-600">
+                Develop technology solutions for local non-profit organizations
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Hackathon Participant</h3>
+              <p class="text-sm font-serif text-slate-500">Various Events 2023-2024</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed text-gray-600">
+                Participated in 5+ hackathons, winning 2 awards for innovation and technical excellence
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-2">
+    <div
+      class="container flex flex-col items-center justify-center mx-auto space-y-16 md:flex-row md:space-y-0 md:items-center">
+      <div class="font-serif text-xs">&copy; Your Name | Last updated November 2025 | Theme developed with <a href="https://tailwindcss.com"
+          class="text-indigo-500 hover:text-color-indigo-800"><code>tailwindcss</code></a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

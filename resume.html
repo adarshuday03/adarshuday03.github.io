@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/icon-profile.svg">
+  <link rel="mask-icon" href="images/mask-icon.svg" color="#94a3b8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <title>Resume | Your Name</title>
+</head>
+
+<body class="bg-slate-100 flex flex-col mx-auto bg-[url('images/bg-full.png')] bg-repeat-x">
+  <!-- Outermost container -->
+  <div class="flex flex-col mx-auto space-y-2 max-w-4xl my-10">
+    <!-- Top-bar -->
+    <ul
+      class="flex flex-col items-center justify-center text-xl font-sans font-normal text-slate-500 dark:text-gray-400 -mb-3 md:flex-row md:justify-end">
+      <li class="mr-2">
+        <a href="index.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">home</a>
+      </li>
+      <li class="mr-2">
+        <a href="resume.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500 active">resume</a>
+      </li>
+      <li class="mr-2">
+        <a href="courses.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">courses</a>
+      </li>
+      <li class="mr-2">
+        <a href="experience.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">experience</a>
+      </li>
+      <li class="mr-2">
+        <a href="contact.html" class="inline-block py-2 px-2 hover:text-indigo-400 duration-500">contact</a>
+      </li>
+    </ul>
+
+    <!-- Main Content -->
+    <div class="container flex flex-col space-y-6">
+      <!-- Page Header -->
+      <div
+        class="relative flex flex-col items-center justify-center pt-6 pb-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h1 class="text-2xl font-serif font-bold">Resume</h1>
+        <p class="text-sm font-serif text-slate-500 mt-2">Education, Skills & Achievements</p>
+      </div>
+
+      <!-- Education Section -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Education</h2>
+        
+        <!-- Education Item 1 -->
+        <div class="mb-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+            <h3 class="text-base font-serif font-bold">Bachelor of Science in Computer Science</h3>
+            <p class="text-sm font-serif text-slate-500">2022 - 2026</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mt-1">Your University</p>
+          <p class="text-sm font-serif mt-2 leading-relaxed">
+            GPA: 3.8/4.0 | Relevant coursework: Data Structures, Algorithms, Database Systems, 
+            Machine Learning, Software Engineering
+          </p>
+        </div>
+
+        <!-- Education Item 2 (High School) -->
+        <div class="mb-4">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-baseline">
+            <h3 class="text-base font-serif font-bold">High School Diploma</h3>
+            <p class="text-sm font-serif text-slate-500">2020 - 2022</p>
+          </div>
+          <p class="text-sm font-serif text-indigo-500 mt-1">Your High School</p>
+          <p class="text-sm font-serif mt-2 leading-relaxed">
+            Graduated with honors | Advanced Placement courses in Mathematics and Computer Science
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Skills</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Programming Languages -->
+          <div>
+            <h3 class="text-base font-serif font-bold mb-2">Programming Languages</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-pink-400 text-pink-800 rounded-full text-xs font-serif">Python</span>
+              <span class="px-3 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs font-serif">JavaScript</span>
+              <span class="px-3 py-1 bg-lime-400 text-lime-800 rounded-full text-xs font-serif">Java</span>
+              <span class="px-3 py-1 bg-violet-400 text-violet-800 rounded-full text-xs font-serif">C++</span>
+              <span class="px-3 py-1 bg-red-400 text-red-800 rounded-full text-xs font-serif">SQL</span>
+            </div>
+          </div>
+
+          <!-- Frameworks & Tools -->
+          <div>
+            <h3 class="text-base font-serif font-bold mb-2">Frameworks & Tools</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-pink-400 text-pink-800 rounded-full text-xs font-serif">React</span>
+              <span class="px-3 py-1 bg-cyan-400 text-cyan-800 rounded-full text-xs font-serif">Node.js</span>
+              <span class="px-3 py-1 bg-lime-400 text-lime-800 rounded-full text-xs font-serif">Django</span>
+              <span class="px-3 py-1 bg-violet-400 text-violet-800 rounded-full text-xs font-serif">Git</span>
+              <span class="px-3 py-1 bg-red-400 text-red-800 rounded-full text-xs font-serif">Docker</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div>
+            <h3 class="text-base font-serif font-bold mb-2">Soft Skills</h3>
+            <ul class="list-disc list-inside text-sm font-serif space-y-1">
+              <li>Problem Solving</li>
+              <li>Team Collaboration</li>
+              <li>Communication</li>
+              <li>Time Management</li>
+            </ul>
+          </div>
+
+          <!-- Other Skills -->
+          <div>
+            <h3 class="text-base font-serif font-bold mb-2">Other</h3>
+            <ul class="list-disc list-inside text-sm font-serif space-y-1">
+              <li>Data Analysis</li>
+              <li>Machine Learning</li>
+              <li>Web Development</li>
+              <li>Database Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements & Awards -->
+      <div
+        class="relative flex flex-col p-6 bg-gradient-to-tl from-slate-200 to-slate-50 text-black rounded-3xl shadow-md shadow-slate-400 border-[1px] border-slate-200">
+        <h2 class="text-xl font-serif font-bold mb-4 border-b-2 border-indigo-400 pb-2">Achievements & Awards</h2>
+        
+        <div class="space-y-4">
+          <!-- Achievement 1 -->
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Dean's List</h3>
+              <p class="text-sm font-serif text-slate-500">Fall 2023, Spring 2024</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed">
+                Recognized for outstanding academic performance with GPA above 3.5
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Hackathon Winner</h3>
+              <p class="text-sm font-serif text-slate-500">University Hackathon 2024</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed">
+                First place in the innovation category for developing a sustainable tech solution
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Research Scholarship</h3>
+              <p class="text-sm font-serif text-slate-500">Summer 2023</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed">
+                Awarded competitive research scholarship for undergraduate research project
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 4 -->
+          <div class="flex items-baseline space-x-3">
+            <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2"></div>
+            <div class="flex-1">
+              <h3 class="text-base font-serif font-bold">Certification in Data Science</h3>
+              <p class="text-sm font-serif text-slate-500">2024</p>
+              <p class="text-sm font-serif mt-1 leading-relaxed">
+                Completed professional certification program in Data Science and Machine Learning
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download CV Button -->
+      <div class="flex justify-center py-4">
+        <a href="files/your-cv.pdf" 
+           class="inline-flex items-center px-6 py-3 bg-indigo-500 text-white font-serif rounded-full hover:bg-indigo-600 duration-200 shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          Download Full CV (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-2">
+    <div
+      class="container flex flex-col items-center justify-center mx-auto space-y-16 md:flex-row md:space-y-0 md:items-center">
+      <div class="font-serif text-xs">&copy; Your Name | Last updated November 2025 | Theme developed with <a href="https://tailwindcss.com"
+          class="text-indigo-500 hover:text-color-indigo-800"><code>tailwindcss</code></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

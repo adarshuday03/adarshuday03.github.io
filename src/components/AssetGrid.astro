@@ -1,0 +1,56 @@
+---
+import type { LoadedProjectAsset } from "../lib/content";
+
+interface Props {
+  assets: LoadedProjectAsset[];
+}
+
+const { assets } = Astro.props;
+const videoAssets = assets.filter((asset) => asset.kind === "video");
+const fileAssets = assets.filter((asset) => asset.kind !== "video");
+---
+
+<div class="asset-section">
+  {videoAssets.length > 0 && (
+    <div class="media-grid">
+      {videoAssets.map((asset) => (
+        <article class="media-card">
+          <video controls playsinline preload="metadata" src={asset.publicPath}>
+            Sorry, your browser does not support embedded video.
+          </video>
+          <div>
+            <p class="mono">Video</p>
+            <h3>{asset.label}</h3>
+            <p class="note">{asset.description}</p>
+          </div>
+          <a class="inline-link" href={asset.publicPath} target="_blank" rel="noreferrer">
+            Open media
+          </a>
+        </article>
+      ))}
+    </div>
+  )}
+
+  {fileAssets.length > 0 && (
+    <div class="file-grid">
+      {fileAssets.map((asset) => (
+        <article class="file-card">
+          <div>
+            <p class="mono">{asset.kind === "document" ? "Document" : "Download"}</p>
+            <h3>{asset.label}</h3>
+            <p class="note">{asset.description}</p>
+          </div>
+          <a
+            class="inline-link"
+            href={asset.publicPath}
+            target="_blank"
+            rel="noreferrer"
+            download={asset.kind === "download"}
+          >
+            {asset.kind === "document" ? "Open file" : "Download asset"}
+          </a>
+        </article>
+      ))}
+    </div>
+  )}
+</div>

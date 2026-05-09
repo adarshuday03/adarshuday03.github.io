@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntryCard from "../../components/EntryCard.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import { getProjectsByInstitution, loadSiteData } from "../../lib/content";
+
+const site = loadSiteData();
+const projects = getProjectsByInstitution("bachelors");
+---
+
+<BaseLayout title="Bachelors" description={site.institutions.bachelors.summary[0]} sectionTone="bachelors">
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="IIT Madras"
+      title={site.institutions.bachelors.headline}
+      summary={site.institutions.bachelors.summary}
+    />
+
+    <div class="metric-grid">
+      {site.institutions.bachelors.stats.map((stat) => (
+        <article class="metric-card">
+          <p class="mono">{stat.label}</p>
+          <p>{stat.value}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="tag-row">
+      {site.institutions.bachelors.focusAreas.map((focusArea) => (
+        <span class="tag">{focusArea}</span>
+      ))}
+    </div>
+
+    <div class="empty-state">{site.institutions.bachelors.buildNote}</div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Undergraduate work"
+      title="Manifest-backed academic and research projects"
+      summary="The main IIT Madras work is now scaffolded as standalone project pages ordered chronologically from the resume timeline."
+      level="h2"
+    />
+
+    {projects.length === 0 ? (
+      <div class="empty-state">
+        No published undergraduate project manifests yet.
+      </div>
+    ) : (
+      <div class="entry-stack">
+        {projects.map((project) => (
+          <EntryCard
+            title={project.title}
+            meta={[project.timeline.label, project.semester, project.course.name]}
+            summary={project.summary}
+            bullets={project.highlights}
+            tags={project.tags}
+            href={project.href}
+            ctaLabel="Open case study"
+          />
+        ))}
+      </div>
+    )}
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Leadership"
+      title="Campus leadership and service"
+      summary="Non-project leadership stays in site-content so it can evolve quickly without adding new routes."
+      level="h2"
+    />
+
+    <div class="entry-stack">
+      {site.resume.leadership.map((entry) => (
+        <EntryCard
+          title={entry.title}
+          meta={[entry.period, entry.subtitle]}
+          summary={entry.summary}
+          bullets={entry.bullets}
+          tags={entry.tags}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Extracurriculars"
+      title="Creative and campus life"
+      summary="These entries keep the broader IIT Madras experience visible without forcing every activity into a full project page."
+      level="h2"
+    />
+
+    <div class="entry-stack">
+      {site.resume.extracurriculars.map((entry) => (
+        <EntryCard
+          title={entry.title}
+          meta={[entry.period, entry.subtitle]}
+          summary={entry.summary}
+          bullets={entry.bullets}
+          tags={entry.tags}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

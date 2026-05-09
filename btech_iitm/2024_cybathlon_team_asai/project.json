@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2024-team-asai-cybathlon",
+  "slug": "team-asai-cybathlon-prosthetic-leg",
+  "title": "Team Asai - Rehabilitation Research and Device Development Lab (R2D2)",
+  "summary": "Built a transfemoral prosthetic leg for Team India at CYBATHLON 2024, combining embedded communication, gait-state control, and multimodal feedback for complex locomotion tasks.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2024,
+  "order": 5,
+  "semester": "Summer and Fall 2024",
+  "timeline": {
+    "start": "2024-05",
+    "end": "2024-11",
+    "label": "May 2024 - Nov 2024"
+  },
+  "course": {
+    "name": "Rehabilitation Research and Device Development Lab (R2D2)",
+    "mentor": "Prof. Manish Anand"
+  },
+  "tags": [
+    "Biomechanics",
+    "Embedded Systems",
+    "Micropython",
+    "Finite State Machines",
+    "Assistive Devices"
+  ],
+  "highlights": [
+    "Built a transfemoral prosthetic leg from scratch for Team India at CYBATHLON 2024 in ETH Zurich.",
+    "Implemented ESP-NOW communication between ESP32 controllers for real-time gait data transfer.",
+    "Developed finite-state control and auditory plus vibrotactile biofeedback for ramps, stairs, and ladder tasks."
+  ],
+  "sections": [
+    {
+      "heading": "Challenge context",
+      "body": [
+        "The project sat at the intersection of assistive-device design and real competition constraints. The objective was not only to make a leg that functioned in a lab, but one that could support demanding task transitions under CYBATHLON conditions.",
+        "That framed the work around reliability, state-awareness, and human-device interaction rather than around a single isolated mechanism."
+      ]
+    },
+    {
+      "heading": "Embedded architecture",
+      "body": [
+        "A major part of the system involved embedded communication using Micropython and ESP-NOW across ESP32 boards. That allowed gait-related information to move in real time between controllers inside the prosthetic setup.",
+        "The embedded layer was essential because responsive state transitions depend on dependable, low-latency signal flow rather than offline analysis."
+      ]
+    },
+    {
+      "heading": "Control logic and feedback",
+      "body": [
+        "Finite State Machines were developed for task environments including stairs, ramps, and ladders. The design problem was to make transitions interpretable and robust across multiple movement modes instead of treating gait as one continuous undifferentiated pattern.",
+        "Auditory and vibrotactile biofeedback were added to help the user interpret what the system was doing during demanding movement sequences."
+      ]
+    },
+    {
+      "heading": "Systems takeaway",
+      "body": [
+        "This project condensed mechanics, controls, embedded communication, and user-centered feedback into a single device workflow. That is part of why it stands out inside the IIT Madras timeline: it required coordinating several technical layers at once.",
+        "It also pushed the work beyond a classroom deliverable into a performance-oriented international competition context."
+      ]
+    }
+  ],
+  "assets": []
+}

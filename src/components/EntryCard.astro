@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  meta?: string | string[];
+  summary?: string;
+  bullets?: string[];
+  tags?: string[];
+  href?: string;
+  ctaLabel?: string;
+}
+
+const {
+  title,
+  meta,
+  summary,
+  bullets = [],
+  tags = [],
+  href,
+  ctaLabel = "Open entry"
+} = Astro.props;
+
+const metaItems = Array.isArray(meta) ? meta : meta ? [meta] : [];
+---
+
+<article class="entry-card">
+  <div class="entry-card-header">
+    {metaItems.length > 0 && (
+      <div class="entry-meta">
+        {metaItems.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    )}
+
+    <h3 class="entry-title">{title}</h3>
+  </div>
+
+  {summary && <p class="note">{summary}</p>}
+
+  {bullets.length > 0 && (
+    <ul class="bullet-list compact">
+      {bullets.map((bullet) => (
+        <li>{bullet}</li>
+      ))}
+    </ul>
+  )}
+
+  {tags.length > 0 && (
+    <div class="tag-row">
+      {tags.map((tag) => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  )}
+
+  {href && (
+    <a class="inline-link" href={href}>
+      {ctaLabel}
+    </a>
+  )}
+</article>

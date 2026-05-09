@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import { loadSiteData } from "../../lib/content";
+
+const site = loadSiteData();
+---
+
+<BaseLayout title="Contact" description="Direct contact routes and external profiles.">
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Contact"
+      title="Direct routes"
+      summary="Keep this section direct and low-friction. The main outbound channels are already separated from the layout code so they stay easy to edit."
+    />
+
+    <div class="panel content-band">
+      <div class="contact-row">
+        <span class="mono">Email</span>
+        <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+      </div>
+      <div class="contact-row">
+        <span class="mono">Phone</span>
+        <a href={`tel:${site.contact.phone}`}>{site.contact.phone}</a>
+      </div>
+      <div class="contact-row">
+        <span class="mono">Location</span>
+        <span>{site.contact.location}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro eyebrow="Profiles" title="External links" summary="Links that should remain editable from site content rather than hardcoded into the page." level="h2" />
+
+    <div class="link-grid">
+      {site.contact.links.map((link) => (
+        <a class="link-card" href={link.href} target="_blank" rel="noreferrer">
+          <h3>{link.label}</h3>
+          {link.note && <p class="note">{link.note}</p>}
+          <span class="inline-link">Open link</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

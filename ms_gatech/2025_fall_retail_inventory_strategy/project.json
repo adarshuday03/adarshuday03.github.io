@@ -1,0 +1,63 @@
+{
+  "id": "gatech-2025-retail-inventory-strategy",
+  "slug": "retail-inventory-strategy-seasonal-uncertainty",
+  "title": "Retail Inventory Strategy under Seasonal Uncertainty",
+  "summary": "Combined Newsvendor reasoning, Bayesian updating, and Monte Carlo simulation to improve inventory and contracting decisions under seasonal demand uncertainty.",
+  "institution": "masters",
+  "institutionLabel": "Georgia Tech",
+  "year": 2025,
+  "order": 2,
+  "semester": "Fall 2025",
+  "timeline": {
+    "start": "2025-09",
+    "end": "2025-12",
+    "label": "Sep 2025 - Dec 2025"
+  },
+  "course": {
+    "name": "Stochastic Operations Research for Supply Chain Engineering",
+    "mentor": "Prof. Xin Chen"
+  },
+  "tags": [
+    "Stochastic Modeling",
+    "Inventory",
+    "Bayesian Methods",
+    "Monte Carlo",
+    "Contract Design"
+  ],
+  "highlights": [
+    "Optimized stochastic inventory models using Newsvendor analysis and pricing-demand tradeoffs.",
+    "Drove a reported 65 percent profit increase through better stocking and pricing decisions.",
+    "Reduced financial risk by 38 percent using Bayesian models and Monte Carlo simulation for buyback and discount contracts."
+  ],
+  "sections": [
+    {
+      "heading": "Demand uncertainty",
+      "body": [
+        "The project focused on retail inventory strategy when demand is seasonal, uncertain, and financially consequential. The central question was how to make stocking and pricing decisions without pretending demand is stable or fully known.",
+        "That set up the work as a stochastic decision problem rather than a deterministic optimization exercise."
+      ]
+    },
+    {
+      "heading": "Inventory logic",
+      "body": [
+        "Newsvendor analysis provided the base decision structure for inventory positioning, while pricing-demand tradeoffs extended the problem beyond pure quantity choice. This allowed profitability to be improved through coordinated operational and commercial decisions.",
+        "The reported outcome was a 65 percent increase in profit under the modeled setting."
+      ]
+    },
+    {
+      "heading": "Risk and contracts",
+      "body": [
+        "Bayesian models and Monte Carlo simulation were used to reason about buyback and discount contracts under uncertainty. That made the project less about one-off demand estimation and more about designing resilience into the commercial structure itself.",
+        "The reported effect was a 38 percent reduction in financial risk, which is a useful indicator of strategy quality under uncertain conditions."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "body": [
+        "This project is one of the clearest examples of the Georgia Tech track leaning into uncertainty rather than smoothing it away. It combines probability, operations, and decision economics in a way that is both analytical and directly managerial.",
+        "As more material is added, this case study can grow into a deeper look at assumptions, priors, and contract-structure tradeoffs."
+      ]
+    }
+  ],
+  "assets": []
+}

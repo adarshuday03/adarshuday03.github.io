@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntryCard from "../../components/EntryCard.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import { getProjectsByInstitution, loadSiteData } from "../../lib/content";
+
+const site = loadSiteData();
+const section = site.institutions.masters;
+const projects = getProjectsByInstitution("masters");
+
+function compactMeta(items: Array<string | undefined>) {
+  return items.filter((item): item is string => Boolean(item));
+}
+---
+
+<BaseLayout title="Masters" description={section.summary[0]} sectionTone="masters">
+  <section class="section-shell">
+    <PageIntro eyebrow="Georgia Tech" title={section.headline} summary={section.summary} />
+
+    <div class="metric-grid">
+      {section.stats.map((stat) => (
+        <article class="metric-card">
+          <p class="mono">{stat.label}</p>
+          <p>{stat.value}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="tag-row">
+      {section.focusAreas.map((focusArea) => (
+        <span class="tag">{focusArea}</span>
+      ))}
+    </div>
+
+    <div class="empty-state">
+      {section.buildNote}
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Current graduate work"
+      title="Manifest-backed course projects"
+      summary="Every major Georgia Tech project from the current resume is now scaffolded as a dedicated case-study page, ready for deeper assets and longer narratives."
+      level="h2"
+    />
+
+    {projects.length === 0 ? (
+      <div class="empty-state">No Georgia Tech project manifests have been added yet.</div>
+    ) : (
+      <div class="entry-stack">
+        {projects.map((project) => (
+          <EntryCard
+            title={project.title}
+            meta={compactMeta([
+              project.timeline.label,
+              project.course.name,
+              project.course.mentor
+            ])}
+            summary={project.summary}
+            bullets={project.highlights}
+            tags={project.tags}
+            href={project.href}
+            ctaLabel="Open case study"
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+{
+  "id": "gatech-2025-tech-dining-forecasting",
+  "slug": "tech-dining-demand-forecasting-optimisation",
+  "title": "Tech Dining Demand Forecasting and Optimisation",
+  "summary": "Developed demand models and simulation logic for West Village Hall dining operations, linking menu-level choice behavior to planning decisions, waste reduction, and service-station demand sensing.",
+  "institution": "masters",
+  "institutionLabel": "Georgia Tech",
+  "year": 2025,
+  "order": 4,
+  "semester": "Fall 2025",
+  "timeline": {
+    "start": "2025-09",
+    "end": "2025-12",
+    "label": "Sep 2025 - Dec 2025"
+  },
+  "course": {
+    "name": "Production planning for West Village Hall dining operations",
+    "mentor": "Prof. Benoit Montreuil"
+  },
+  "tags": [
+    "Demand Forecasting",
+    "Simulation",
+    "Operations",
+    "Discrete Choice",
+    "Dining Systems"
+  ],
+  "highlights": [
+    "Engineered discrete-choice demand models for 1,342 menu items using multinomial logit scoring.",
+    "Reduced hall waste from 44 percent to 13 percent through better planning logic.",
+    "Created a SimPy-based demand-sensing engine for 1,500-plus peak daily footfall across five stations."
+  ],
+  "sections": [
+    {
+      "heading": "Operational question",
+      "body": [
+        "The project focused on dining-hall production planning, where waste and service performance depend heavily on demand uncertainty. The key problem was to move from reactive food preparation toward a better demand-aware planning model.",
+        "That required modeling choice behavior at a granular level rather than forecasting total footfall alone."
+      ]
+    },
+    {
+      "heading": "Choice modeling",
+      "body": [
+        "A multinomial-logit-style scoring approach was used across 1,342 menu items to capture how menu options compete for demand. This shifted the problem from broad aggregate estimation to item-level demand structure.",
+        "The point of that detail was to support production decisions closer to actual menu behavior."
+      ]
+    },
+    {
+      "heading": "Demand sensing and station flow",
+      "body": [
+        "A SimPy-based demand-sensing engine was then used to examine peak daily footfall across five dining stations. That exposed a 109 percent higher protein-demand pattern than initial assumptions suggested, which is exactly the kind of operational signal that simple averages often miss.",
+        "The simulation layer therefore complemented the choice model by showing how station-level activity behaves in time."
+      ]
+    },
+    {
+      "heading": "Outcome",
+      "body": [
+        "The work reported a reduction in hall waste from 44 percent to 13 percent, which made the project immediately legible as an operations-improvement case study. It also demonstrates the Georgia Tech theme of turning analytical models into decisions with real planning consequences.",
+        "As the folder grows, this page can hold the actual model assumptions, datasets, and planning outputs without any routing changes."
+      ]
+    }
+  ],
+  "assets": []
+}

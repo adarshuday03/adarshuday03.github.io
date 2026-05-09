@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/PageIntro.astro";
+import { loadSiteData } from "../../lib/content";
+
+const site = loadSiteData();
+---
+
+<BaseLayout title="Achievements" description="Scholastic milestones and academic foundation." sectionTone="achievements">
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Scholastic achievements"
+      title="Academic milestones"
+      summary="High-signal scores, ranks, and academic milestones that anchor the broader timeline."
+    />
+
+    <div class="achievement-grid">
+      {site.achievements.map((achievement) => (
+        <article class="achievement-card">
+          <p class="mono">Achievement</p>
+          <p class="achievement-value">{achievement.value}</p>
+          <h3>{achievement.title}</h3>
+          <p class="note">{achievement.detail}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Education"
+      title="Schooling and degrees"
+      summary="The institutions behind the archive, ordered from the current academic track back to school."
+      level="h2"
+    />
+
+    <div class="school-grid">
+      {site.schooling.map((entry) => (
+        <article class="school-card">
+          <p class="mono">{entry.year}</p>
+          <h3>{entry.institution}</h3>
+          <p>{entry.credential}</p>
+          <p class="note">{entry.score}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

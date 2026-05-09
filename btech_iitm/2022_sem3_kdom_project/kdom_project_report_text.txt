@@ -1,0 +1,78 @@
+Indian Institute Of Technology MadrasDepartment of Mechanical Engineering
+KINEMATICS AND
+DYNAMICS OF
+MACHINERY
+Adarsh UdayME21B005
+Submitted by: Submitted to:
+Dr. Manish Anandon 25th November 2022
+COURSE PROJECT
+PROJECT OVERVIEW
+To introduce the mechanism used, it is a basic four-bar mechanism. The
+bottom of the box, link CD, is the coupler in the aforementioned four-
+bar mechanism.As mentioned in the problem statement, I have assumed an
+appropriate scale in the units of the CAD softwares used.
+1 cm = 1 unit
+The initial iteration of the design for the mechanism was done on
+AUTOCAD. I made the scaled workspace, and began with the initial
+ideation.The initial ideation was of two-position synthesis considering the initial
+and final positions of points C and D; finding their perpendicular
+bisectors and locating some suitable center on these bisectors inside
+the shaded region for the fixed pivots.The selected pivot points are marked as O2 and O4. O4 is joined to O2; and is link number 1. O2 is joined to C; and is link number 2. C is joined to D; and is link number 3.D is joined to O4; and is link number 4. Therefore, it is a four-bar mechanism, with link 1 grounded, and link 3
+as the coupler.
+MECHANISM ANALYSIS
+Grashof Analysis 
+Longest link length = 194.48cm = LShortest link length = 49.71cm = SIntermiediate link lengths: 163.91 = P, 91cm = QClearly, S + L < P + QTherefore, this mechanism follows Grashof's law, and is thus a
+Grashof mechanism.Since the shortest link is grounded, this Grashof mechanism is a
+Double Crank mechanism.Link 1 is grounded.Links 2 and 4 are both "Cranks".Link 3, the coupler, "tumbles" due to the motion of the two cranks. Here is a video showing the motion of a generalised Double Crank
+mechanism. It is quite evident that the coupler rotates 360° about
+its own center of rotation. 
+Tranmission Angles
+The transmission angle is the angle between the coupler and the
+output link. Transmission angle at initial extreme position is 145°Transmission angle at final extreme position is 67°
+IDEATION AND CONSTRUCTION
+I began with the initial idea of two-position synthesis considering the
+initial and final positions of points C and D on the box.Then, I joined the initial and final points of C (C and C' respectively),
+and also joined the initial and final points of D (D and D' respectively).I constructed perpendicular bisectors to each of the lines CC' and DD',
+and then considered one point on each bisector that lies in the fixed
+region.The point on the bisector of CC' is O2 and the point on the bisector of
+DD' is O4.O2 and O4 are now the fixed pivots for the four-bar mechanism.
+AUTOCAD construction diagram
+DELIVERABLES
+The motion of the proposed four-bar mechanism does not interfere
+with the smooth operation of the truck. The motion of the container is smooth as the mechanism operates from
+extreme to extreme. The proposed mechanism is formulated with all given constraints taken
+into consideration, and is entirely contained inside the given
+workspace. The links are all rigid, the joints are all of single degree of freedom
+(revolute pin joints)Recommendations for large-scale production:Using a better connecter between couplers of both mechanisms
+that sits the box on itself well, and releases the box at the end.Possibly using washers instead of screws, such that the ends of
+these joints that stick out do not interfere with the other links, and
+such that these joints allow fully free rotation of cranks & coupler.Fixing the two ground positions slightly better. I feel the ground
+position I have chosen is tedious to demonstrate, and is also
+probably not feasible for large scale produce. 
+Initial
+position
+Final
+position
+MODEL
+Model AnimationO2O4CDO2O4CD
+Physical Model
+Initial position
+The box sits on the a support
+fixed between both couplers. Therefore, the base of the box,
+which is on this support, performs
+the exact same motion as the
+couplers themself do.The base of the box is horizontal
+in the initial position.
+Final position
+Crudely speaking, the box
+performs a 270° rotation. Both of
+the couplers are vertical in the
+final position. The base of the box is also
+vertical, hence satisfying the
+problem statement.
+Videos of the working model
+I have attached all model videos, designs and animations of the proposed
+mechanism in this Google Drive link.I have also submitted the videos of the physical model, PDF of the
+proposed design, animation of the design and this report directly to Google
+Classroom. The link is open to any IITM email ID.Drive Link : 
+https://drive.google.com/drive/u/1/folders/1EXkkG-qxQuxO_YuUHnMDE21oDi_NtH11

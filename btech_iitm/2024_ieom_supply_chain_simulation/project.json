@@ -1,0 +1,62 @@
+{
+  "id": "iitm-2024-ieom-monte-carlo",
+  "slug": "monte-carlo-single-tier-supply-chain",
+  "title": "Monte-Carlo Simulation of a Single Tiered Supply Chain with Total Cost Minimization Objective",
+  "summary": "Built an award-winning simulation study that used VBA-driven Monte Carlo experimentation and route-cost evaluation to identify cost-minimal supplier-assembler-demand network configurations.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2024,
+  "order": 6,
+  "semester": "Independent competition work",
+  "timeline": {
+    "start": "2024-11",
+    "end": "2024-11",
+    "label": "Nov 2024"
+  },
+  "course": {
+    "name": "IEOM Society Simulation Competition"
+  },
+  "tags": [
+    "Monte Carlo",
+    "Supply Chain",
+    "VBA",
+    "Optimization",
+    "Google Maps API"
+  ],
+  "highlights": [
+    "Won first place in the Simulation Competition at the IEOM Society's November 2024 conference.",
+    "Executed 10,000-plus Monte Carlo simulations in Excel Macros VBA to search for cost-minimal routing decisions.",
+    "Integrated Google Maps API distance calculations to make transportation cost estimates reflect real route distances."
+  ],
+  "sections": [
+    {
+      "heading": "Competition framing",
+      "body": [
+        "The work was structured as a simulation competition problem around total-cost minimization in a single-tier supply chain. The challenge was not just building a simulation, but making the simulation useful for decision-making under uncertainty.",
+        "That meant linking random variation in the network to a clear optimization target instead of stopping at descriptive experimentation."
+      ]
+    },
+    {
+      "heading": "Simulation engine",
+      "body": [
+        "The core engine was built in Excel Macros VBA and used to run more than 10,000 Monte Carlo trials. This made it possible to explore a large configuration space while preserving an environment that was easy to communicate and test.",
+        "Each run contributed to identifying routing patterns that lowered aggregate supply chain cost under the modeled assumptions."
+      ]
+    },
+    {
+      "heading": "Cost realism",
+      "body": [
+        "A key improvement was the use of Google Maps API distance data rather than abstract or assumed travel values. That grounded the transportation-cost layer in route lengths closer to operational reality.",
+        "The result was a simulation that did more than produce theoretical minima: it translated geography into the optimization logic."
+      ]
+    },
+    {
+      "heading": "Outcome",
+      "body": [
+        "The project was recognized with a first-place award, which indicates the work stood out not only technically but also in how clearly the optimization logic was expressed through simulation.",
+        "It also marked an early bridge between operations analytics and the later supply-chain-focused work in graduate study."
+      ]
+    }
+  ],
+  "assets": []
+}

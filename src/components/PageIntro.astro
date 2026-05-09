@@ -1,0 +1,20 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  summary?: string | string[];
+  level?: "h1" | "h2";
+}
+
+const { eyebrow, title, summary, level = "h1" } = Astro.props;
+const paragraphs = Array.isArray(summary) ? summary : summary ? [summary] : [];
+const Heading = level;
+---
+
+<div class="page-intro">
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <Heading>{title}</Heading>
+  {paragraphs.map((paragraph) => (
+    <p>{paragraph}</p>
+  ))}
+</div>

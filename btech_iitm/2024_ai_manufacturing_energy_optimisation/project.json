@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2024-energy-optimisation-metal-fabrication",
+  "slug": "energy-optimisation-metal-fabrication",
+  "title": "Energy Optimisation in Metal Fabrication",
+  "summary": "Analyzed spindle-level manufacturing energy data, identified seasonal demand patterns, and used time-series forecasting to propose a more data-driven operating model for a CNC screws plant.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2024,
+  "order": 4,
+  "semester": "Semester 7",
+  "timeline": {
+    "start": "2024-09",
+    "end": "2024-11",
+    "label": "Sep 2024 - Nov 2024"
+  },
+  "course": {
+    "name": "Artificial Intelligence in Manufacturing",
+    "mentor": "Prof. G. L. Samuel"
+  },
+  "tags": [
+    "Manufacturing",
+    "Forecasting",
+    "Prophet",
+    "IoT",
+    "Energy Analytics"
+  ],
+  "highlights": [
+    "Identified seasonality and non-linearity in spindle-level data from a CNC screws plant.",
+    "Applied Prophet for time-series forecasting and reached 1.06 percent MAPE.",
+    "Designed an IoT-oriented data-collection concept tied to real plant behavior."
+  ],
+  "sections": [
+    {
+      "heading": "Manufacturing problem",
+      "body": [
+        "The project addressed energy optimization in a metal-fabrication environment by working from spindle-level plant data. Rather than treating power usage as a flat operational overhead, the work looked for patterns that could be modeled and anticipated.",
+        "That made the effort both analytical and operational: the point was to turn observed energy behavior into better planning and monitoring decisions."
+      ]
+    },
+    {
+      "heading": "Pattern discovery",
+      "body": [
+        "A key part of the analysis was identifying seasonality and non-linearity in the manufacturing data. The observed behavior was linked to local auto-manufacturer order patterns, which reframed the plant's energy demand as something coupled to upstream business cycles.",
+        "This interpretation mattered because it pushed the project beyond pure curve fitting toward a more systems-aware explanation of plant load."
+      ]
+    },
+    {
+      "heading": "Forecasting approach",
+      "body": [
+        "Prophet was used as the forecasting model, leading to a reported 1.06 percent Mean Absolute Percent Error. The low error made the model useful as an operational forecasting tool rather than just an academic comparison exercise.",
+        "By forecasting energy behavior over time, the work supported the broader goal of scheduling, monitoring, and process visibility."
+      ]
+    },
+    {
+      "heading": "Instrumentation outlook",
+      "body": [
+        "The project also proposed an IoT-based data-collection layer, which is important because better models depend on better future measurements. That decision shows the work was not limited to analysis alone; it also considered how the data pipeline should improve.",
+        "The overall result was a manufacturing-energy case study that connected analytics, plant operations, and instrumentation design."
+      ]
+    }
+  ],
+  "assets": []
+}

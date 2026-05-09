@@ -1,0 +1,138 @@
+---
+import AssetGrid from "../../components/AssetGrid.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { loadProjects } from "../../lib/content";
+
+export function getStaticPaths() {
+  return loadProjects().map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const featuredVideo = project.assets.find((asset) => asset.featured && asset.kind === "video")
+  ?? project.assets.find((asset) => asset.kind === "video");
+const institutionHref = project.institution === "bachelors" ? "/bachelors/" : "/masters/";
+---
+
+<BaseLayout title={project.title} description={project.summary} sectionTone={project.institution}>
+  <section class="project-hero panel">
+    <div class="breadcrumbs">
+      <a href={institutionHref}>{project.institutionLabel}</a>
+      <span>/</span>
+      <span>{project.course.name}</span>
+    </div>
+
+    <div class="project-hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Case study / {project.timeline.label}</p>
+        <h1 class="display" style="font-size: clamp(2.2rem, 4vw, 4.1rem);">{project.title}</h1>
+        <p class="lede">{project.summary}</p>
+
+        <div class="inline-chips">
+          {project.tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+
+        <ul class="bullet-list">
+          {project.highlights.map((highlight) => (
+            <li>{highlight}</li>
+          ))}
+        </ul>
+      </div>
+
+      {featuredVideo && (
+        <div>
+          <video class="hero-video" controls playsinline preload="metadata" src={featuredVideo.publicPath}>
+            Sorry, your browser does not support embedded video.
+          </video>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <div class="project-grid">
+      <div class="panel content-band section-copy">
+        {project.sections.map((section) => (
+          <article>
+            <h3>{section.heading}</h3>
+            {section.body.map((paragraph) => (
+              <p class="note">{paragraph}</p>
+            ))}
+          </article>
+        ))}
+
+        {project.externalLinks && project.externalLinks.length > 0 && (
+          <article>
+            <h3>External references</h3>
+            <div class="link-grid">
+              {project.externalLinks.map((link) => (
+                <a class="link-card" href={link.href} target="_blank" rel="noreferrer">
+                  <h3>{link.label}</h3>
+                  <span class="inline-link">Open reference</span>
+                </a>
+              ))}
+            </div>
+          </article>
+        )}
+      </div>
+
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3>Project metadata</h3>
+          <dl class="metadata-list">
+            <div>
+              <dt>Institution</dt>
+              <dd>{project.institutionLabel}</dd>
+            </div>
+            <div>
+              <dt>Course / context</dt>
+              <dd>{project.course.name}</dd>
+            </div>
+            {project.course.mentor && (
+              <div>
+                <dt>Guide / mentor</dt>
+                <dd>{project.course.mentor}</dd>
+              </div>
+            )}
+            <div>
+              <dt>Semester</dt>
+              <dd>{project.semester}</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>{project.timeline.label}</dd>
+            </div>
+            <div>
+              <dt>Assets referenced</dt>
+              <dd>{project.assets.length}</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {project.assets.length > 0 ? (
+    <section class="section-shell">
+      <div class="page-intro">
+        <p class="eyebrow">Evidence</p>
+        <h2>Media and deliverables</h2>
+        <p>
+          Videos are embedded directly when the browser supports them. CAD-native formats and long-form documents remain downloadable so the source material stays intact.
+        </p>
+      </div>
+
+      <AssetGrid assets={project.assets} />
+    </section>
+  ) : (
+    <section class="section-shell">
+      <div class="empty-state">
+        No media has been published for this project yet. The folder and route are already in place so reports, datasets, slides, source files, or video can be added later without changing the page template.
+      </div>
+    </section>
+  )}
+</BaseLayout>

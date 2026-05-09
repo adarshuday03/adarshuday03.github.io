@@ -1,0 +1,22 @@
+{
+  "name": "adarshuday03.github.io",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "prebuild": "node ./scripts/sync-content-assets.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@types/node": "^25.6.2",
+    "astro": "^5.0.0",
+    "typescript": "^5.6.3"
+  }
+}

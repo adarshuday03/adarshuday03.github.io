@@ -1,0 +1,63 @@
+{
+  "id": "gatech-2025-water-network-monitoring",
+  "slug": "water-distribution-network-monitoring",
+  "title": "Network Monitoring for Water Distribution Pipe Infrastructure",
+  "summary": "Formulated and benchmarked optimization models for sensor placement across a large pipe network, balancing network coverage against computational efficiency.",
+  "institution": "masters",
+  "institutionLabel": "Georgia Tech",
+  "year": 2025,
+  "order": 3,
+  "semester": "Fall 2025",
+  "timeline": {
+    "start": "2025-09",
+    "end": "2025-12",
+    "label": "Sep 2025 - Dec 2025"
+  },
+  "course": {
+    "name": "Operations Research in Supply Chain Engineering",
+    "mentor": "Prof. Mathieu Dahan"
+  },
+  "tags": [
+    "Optimization",
+    "MILP",
+    "Heuristics",
+    "Infrastructure",
+    "Network Design"
+  ],
+  "highlights": [
+    "Developed MILP models in Gurobi and PuLP for optimal sensor placement across a 1,123-pipe network.",
+    "Benchmarked a greedy heuristic against exact optimization.",
+    "Reached 96 to 99 percent network coverage with roughly 1000x faster heuristic runtime."
+  ],
+  "sections": [
+    {
+      "heading": "Design problem",
+      "body": [
+        "The project treated infrastructure monitoring as a placement problem over a large pipe network. The challenge was to choose where sensors should go so that critical coverage objectives were met without wasting monitoring capacity.",
+        "This is a classic operations-research structure: sparse interventions, large networks, and a decision objective shaped by coverage."
+      ]
+    },
+    {
+      "heading": "Exact model",
+      "body": [
+        "MILP models were built in Gurobi and PuLP to represent the sensor-placement problem formally across 1,123 pipes. The exact model provided the benchmark for what optimal monitoring could look like when computational time is available.",
+        "That exact layer was important because it established a reference point for evaluating faster approximate methods."
+      ]
+    },
+    {
+      "heading": "Greedy heuristic",
+      "body": [
+        "A greedy heuristic was developed and benchmarked against the exact model. The heuristic reached 96 to 99 percent network coverage while running around 1000 times faster, making it relevant for settings where solution speed matters as much as theoretical optimality.",
+        "The comparison turned the project into a clear tradeoff study between quality and runtime."
+      ]
+    },
+    {
+      "heading": "Systems relevance",
+      "body": [
+        "Although the infrastructure domain was water distribution, the underlying structure maps well to broader monitoring and network-design problems in supply chain engineering. That transferability is one of the reasons the project fits the Georgia Tech section well.",
+        "It demonstrates applied optimization with a concrete operational interpretation instead of optimization in abstraction."
+      ]
+    }
+  ],
+  "assets": []
+}

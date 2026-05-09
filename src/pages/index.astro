@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EntryCard from "../components/EntryCard.astro";
+import PageIntro from "../components/PageIntro.astro";
+import { getProjectBySlug, getProjectsByInstitution, loadProjects, loadSiteData } from "../lib/content";
+
+const site = loadSiteData();
+const allProjects = loadProjects();
+const mastersProjects = getProjectsByInstitution("masters");
+const bachelorsProjects = getProjectsByInstitution("bachelors");
+const featuredProject = site.home.featuredProjectSlug
+  ? getProjectBySlug(site.home.featuredProjectSlug)
+  : undefined;
+
+function compactMeta(items: Array<string | undefined>) {
+  return items.filter((item): item is string => Boolean(item));
+}
+
+const heroStats = [
+  { label: "Published case studies", value: String(allProjects.length) },
+  { label: "Georgia Tech projects", value: String(mastersProjects.length) },
+  { label: "IIT Madras projects", value: String(bachelorsProjects.length) }
+];
+---
+
+<BaseLayout
+  title={site.person.name}
+  description="A living archive of Adarsh Uday's work across engineering, supply chain systems, and digital products."
+  sectionTone="home"
+>
+  <section class="home-hero panel">
+    <div class="hero-copy">
+      <p class="eyebrow">Digital embodiment / v1 foundation</p>
+      <h1 class="display">{site.person.name}</h1>
+      <p class="lede">{site.person.title}</p>
+      {site.person.intro.map((paragraph) => (
+        <p class="note">{paragraph}</p>
+      ))}
+
+      <div class="inline-chips">
+        <span class="tag">{site.person.location}</span>
+        <span class="tag">{site.person.currentMindset}</span>
+      </div>
+
+      <div class="section-actions">
+        <a class="button-link" href="/bachelors/">Start with IIT Madras</a>
+        <a class="button-link" href="/masters/">See Georgia Tech track</a>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      {heroStats.map((stat) => (
+        <article class="stat-card">
+          <p class="mono">{stat.label}</p>
+          <p class="stat-value">{stat.value}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <div class="two-column">
+      <div class="panel content-band">
+        <PageIntro eyebrow="Now" title="Current focus" summary="What is active right now, before the archive fills out completely." level="h2" />
+        <ul class="bullet-list">
+          {site.person.currentFocus.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="panel content-band">
+        <PageIntro eyebrow="Map" title="How the site is structured" summary="Institution-first, then chronology, then detailed project pages and supporting material." level="h2" />
+        <div class="home-highlight-list">
+          {site.home.highlightSections.map((section) => (
+            <a class="link-card" href={section.href}>
+              <h3>{section.title}</h3>
+              <p class="note">{section.summary}</p>
+              <span class="inline-link">Open section</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Institution foundations"
+      title="The archive is split by academic context, then by chronology"
+      summary="The top-level structure stays stable even as new folders, assets, and full writeups get added over time."
+      level="h2"
+    />
+
+    <div class="two-column">
+      <article class="panel content-band detail-panel">
+        <p class="eyebrow">Georgia Tech</p>
+        <h3 class="entry-title">{site.institutions.masters.headline}</h3>
+        {site.institutions.masters.summary.map((paragraph) => (
+          <p class="note">{paragraph}</p>
+        ))}
+        <div class="metric-grid">
+          {site.institutions.masters.stats.map((stat) => (
+            <div class="metric-card">
+              <p class="mono">{stat.label}</p>
+              <p>{stat.value}</p>
+            </div>
+          ))}
+        </div>
+        <div class="tag-row">
+          {site.institutions.masters.focusAreas.map((focusArea) => (
+            <span class="tag">{focusArea}</span>
+          ))}
+        </div>
+        <a class="inline-link" href="/masters/">Open graduate section</a>
+      </article>
+
+      <article class="panel content-band detail-panel">
+        <p class="eyebrow">IIT Madras</p>
+        <h3 class="entry-title">{site.institutions.bachelors.headline}</h3>
+        {site.institutions.bachelors.summary.map((paragraph) => (
+          <p class="note">{paragraph}</p>
+        ))}
+        <div class="metric-grid">
+          {site.institutions.bachelors.stats.map((stat) => (
+            <div class="metric-card">
+              <p class="mono">{stat.label}</p>
+              <p>{stat.value}</p>
+            </div>
+          ))}
+        </div>
+        <div class="tag-row">
+          {site.institutions.bachelors.focusAreas.map((focusArea) => (
+            <span class="tag">{focusArea}</span>
+          ))}
+        </div>
+        <a class="inline-link" href="/bachelors/">Open undergraduate section</a>
+      </article>
+    </div>
+  </section>
+
+  {featuredProject && (
+    <section class="section-shell">
+      <PageIntro
+        eyebrow="Starting point"
+        title="First fully built case study"
+        summary="The KDOM project is the first folder promoted into the site system. It is the reference implementation for future project pages."
+        level="h2"
+      />
+
+      <EntryCard
+        title={featuredProject.title}
+        meta={compactMeta([
+          featuredProject.timeline.label,
+          featuredProject.course.name,
+          featuredProject.course.mentor
+        ])}
+        summary={featuredProject.summary}
+        bullets={featuredProject.highlights}
+        tags={featuredProject.tags}
+        href={featuredProject.href}
+        ctaLabel="Open project page"
+      />
+    </section>
+  )}
+
+  <section class="section-shell">
+    <PageIntro
+      eyebrow="Timeline preview"
+      title="A life map in progress"
+      summary="The structure is already arranged around chronology so more folders can become navigable without a redesign."
+      level="h2"
+    />
+
+    <div class="timeline-grid">
+      {site.home.timelinePreview.map((entry) => (
+        <article class="timeline-node">
+          <p class="mono">{entry.year}</p>
+          <h3>{entry.label}</h3>
+          <p class="note">{entry.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

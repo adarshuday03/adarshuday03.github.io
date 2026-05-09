@@ -1,0 +1,137 @@
+{
+  "id": "iitm-2022-sem3-kdom",
+  "slug": "constrained-four-bar-mechanism",
+  "title": "Constrained Four-Bar Mechanism to Lift a Container into a Truck",
+  "summary": "Designed a constrained four-bar linkage that moved a container between defined truck-loading positions, from two-position synthesis in 2D CAD to a 3D model and physical prototype.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2022,
+  "order": 1,
+  "semester": "Semester 3",
+  "timeline": {
+    "start": "2022-09",
+    "end": "2022-11",
+    "label": "Sep 2022 - Nov 2022"
+  },
+  "course": {
+    "name": "Kinematics and Dynamics of Machinery",
+    "mentor": "Prof. Manish Anand"
+  },
+  "tags": [
+    "Mechanical Design",
+    "Kinematic Synthesis",
+    "AutoCAD",
+    "Fusion 360",
+    "Prototyping"
+  ],
+  "highlights": [
+    "Used graphical kinematic synthesis to satisfy constrained start and end positions for a truck-loading motion.",
+    "Extended the mechanism from 2D CAD geometry into an animated 3D model in Fusion 360.",
+    "Validated the concept with a physical prototype that lifted the container smoothly through the target path."
+  ],
+  "sections": [
+    {
+      "heading": "Problem framing",
+      "body": [
+        "The brief was to design a mechanism that could lift a container into a truck while staying inside a constrained workspace and matching prescribed initial and final states.",
+        "I modeled the base of the box as the coupler of a four-bar mechanism and kept the CAD work on a simple scale of 1 cm to 1 unit for consistent construction."
+      ]
+    },
+    {
+      "heading": "Synthesis and geometry",
+      "body": [
+        "The ideation started with two-position synthesis using the initial and final positions of points C and D on the container. I joined C to C-prime and D to D-prime, constructed perpendicular bisectors, and selected suitable fixed pivots O2 and O4 inside the allowed region.",
+        "That construction yielded a grounded four-bar linkage with O2-C as link 2, C-D as the coupler, and D-O4 as link 4. The choice of pivots satisfied the positional constraints while preserving a clean motion path inside the workspace."
+      ]
+    },
+    {
+      "heading": "Mechanism analysis",
+      "body": [
+        "The mechanism satisfies Grashof's law because the shortest plus longest link lengths remain smaller than the sum of the intermediate links. With the shortest link grounded, the design behaves as a double-crank mechanism and the coupler tumbles through the motion.",
+        "Transmission angles at the extreme positions were approximately 145 degrees and 67 degrees. Those values helped check whether the motion would remain practically demonstrable through the entire path."
+      ]
+    },
+    {
+      "heading": "Deliverables and reflection",
+      "body": [
+        "The project ended with a CAD drawing, animated digital model, physical prototype, and written report. The lifting motion stayed smooth and avoided interference with the truck workspace across the required extremes.",
+        "The report also highlighted practical improvements for large-scale production, especially better coupling between the two mechanisms, less obstructive joints, and more robust ground-positioning choices."
+      ]
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "Original Google Drive submission folder",
+      "href": "https://drive.google.com/drive/u/1/folders/1EXkkG-qxQuxO_YuUHnMDE21oDi_NtH11"
+    }
+  ],
+  "assets": [
+    {
+      "file": "ME21B005_ModelAnimation.webm",
+      "kind": "video",
+      "label": "3D model animation",
+      "description": "Animated motion study of the mechanism in Fusion 360.",
+      "featured": true
+    },
+    {
+      "file": "ME21B005_PhysicalMechanism3D.mp4",
+      "kind": "video",
+      "label": "Physical mechanism in 3D",
+      "description": "Three-dimensional view of the prototype performing the lifting motion."
+    },
+    {
+      "file": "ME21B005_PhysicalMechanism2D.mp4",
+      "kind": "video",
+      "label": "Physical mechanism in 2D",
+      "description": "Side-view demonstration of the physical prototype."
+    },
+    {
+      "file": "ME21B005_PhysicalMechanism.mp4",
+      "kind": "video",
+      "label": "Prototype motion close-up",
+      "description": "Working model demonstration of the mechanism and container motion."
+    },
+    {
+      "file": "ME21B005_InitialPosition.mp4",
+      "kind": "video",
+      "label": "Initial position reference",
+      "description": "Reference video of the mechanism at the starting state."
+    },
+    {
+      "file": "ME21B005_FinalPosition.mp4",
+      "kind": "video",
+      "label": "Final position reference",
+      "description": "Reference video of the mechanism at the target state."
+    },
+    {
+      "file": "ME21B005_ProjectDesignPDF.pdf",
+      "kind": "document",
+      "label": "Design drawing PDF",
+      "description": "Final design drawing exported from CAD."
+    },
+    {
+      "file": "kdom_project_report_me21b005.pdf",
+      "kind": "document",
+      "label": "Submitted project report",
+      "description": "Original report submitted for the course project."
+    },
+    {
+      "file": "kdom_project_report_text.txt",
+      "kind": "document",
+      "label": "Report text source",
+      "description": "Raw text transcript of the report content."
+    },
+    {
+      "file": "ME21B005_ProjectAnimation.f3d",
+      "kind": "download",
+      "label": "Fusion 360 source file",
+      "description": "Native Fusion 360 animation and model file."
+    },
+    {
+      "file": "ME21B005_ProjectDesignDWG.dwg",
+      "kind": "download",
+      "label": "AutoCAD drawing source",
+      "description": "Original DWG file for the mechanism layout."
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Masters",
+      "href": "/masters/"
+    },
+    {
+      "label": "Bachelors",
+      "href": "/bachelors/"
+    },
+    {
+      "label": "Achievements",
+      "href": "/achievements/"
+    },
+    {
+      "label": "About / Now",
+      "href": "/about/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "person": {
+    "name": "Adarsh Uday",
+    "title": "Mechanical engineer turned systems and supply chain builder",
+    "location": "Atlanta, USA",
+    "intro": [
+      "I build systems across physical engineering, operations research, and digital products.",
+      "This site is a living archive of my work, from mechanism design at IIT Madras to supply chain modeling at Georgia Tech."
+    ],
+    "currentMindset": "Build rigorously, explain clearly, and make complex systems legible.",
+    "currentFocus": [
+      "M.S. in Supply Chain Engineering at Georgia Tech with a 4.0 GPA.",
+      "Turning resume shorthand into full technical case studies with media, decisions, and outcomes.",
+      "Designing this site as a navigable digital embodiment rather than a static portfolio."
+    ]
+  },
+  "home": {
+    "featuredProjectSlug": "constrained-four-bar-mechanism",
+    "highlightSections": [
+      {
+        "title": "Georgia Tech",
+        "href": "/masters/",
+        "summary": "Graduate work in demand forecasting, network optimization, stochastic inventory, and facility systems design."
+      },
+      {
+        "title": "IIT Madras",
+        "href": "/bachelors/",
+        "summary": "Mechanical design, manufacturing systems, embedded research, campus product building, and leadership across the B.Tech years."
+      },
+      {
+        "title": "Achievements and Schooling",
+        "href": "/achievements/",
+        "summary": "Scholastic milestones, exam performance, and the academic foundations that shaped the work."
+      }
+    ],
+    "timelinePreview": [
+      {
+        "year": "2025 - 2026",
+        "label": "Georgia Tech",
+        "description": "Supply Chain Engineering projects in operations research, stochastic modeling, and systems design."
+      },
+      {
+        "year": "2021 - 2025",
+        "label": "IIT Madras",
+        "description": "Mechanical engineering coursework, research, competition projects, leadership, and campus initiatives."
+      },
+      {
+        "year": "2024",
+        "label": "From products to systems",
+        "description": "Built software and analytics work alongside prosthetics research and manufacturing optimization."
+      },
+      {
+        "year": "2021",
+        "label": "Academic inflection point",
+        "description": "JEE performance and school results set the stage for the IIT Madras track."
+      }
+    ]
+  },
+  "institutions": {
+    "masters": {
+      "headline": "Georgia Tech - M.S. in Supply Chain Engineering",
+      "summary": [
+        "The Georgia Tech track is centered on quantitative decision-making, systems design, and operations strategy.",
+        "The site foundation now treats each course project as a manifest-backed case study, so deeper folders, assets, and revisions can be added later without touching the routing layer."
+      ],
+      "stats": [
+        {
+          "label": "Program",
+          "value": "M.S. Supply Chain Engineering"
+        },
+        {
+          "label": "Location",
+          "value": "Atlanta, USA"
+        },
+        {
+          "label": "Current GPA",
+          "value": "4.00 / 4.00"
+        },
+        {
+          "label": "Scaffold status",
+          "value": "Full project pages ready"
+        }
+      ],
+      "focusAreas": [
+        "Demand forecasting and demand sensing",
+        "Operations research and network design",
+        "Stochastic inventory strategy under uncertainty",
+        "Facility systems design and storage strategy"
+      ],
+      "buildNote": "Each Georgia Tech case study now lives in its own folder under ms_gatech so more detailed artifacts can be added without restructuring the site."
+    },
+    "bachelors": {
+      "headline": "IIT Madras - B.Tech in Mechanical Engineering",
+      "summary": [
+        "The IIT Madras side of the archive spans mechanism design, manufacturing systems, undergraduate research, entrepreneurship, campus product building, and embedded prototyping.",
+        "The section is now structured around manifest-backed project pages for the main academic and research work, while leadership and extracurricular material remains editable from site content."
+      ],
+      "stats": [
+        {
+          "label": "Degree",
+          "value": "B.Tech Mechanical Engineering"
+        },
+        {
+          "label": "Institution",
+          "value": "IIT Madras"
+        },
+        {
+          "label": "Graduation",
+          "value": "2025"
+        },
+        {
+          "label": "CGPA",
+          "value": "8.15 / 10.00"
+        }
+      ],
+      "focusAreas": [
+        "Mechanism design and physical prototyping",
+        "Manufacturing systems and plant simulation",
+        "Applied analytics and forecasting",
+        "Embedded systems, biomechanics, and campus software products"
+      ],
+      "buildNote": "Leadership, extracurriculars, and skills stay in site-content, while academic and research work is scaffolded as canonical project folders under btech_iitm."
+    }
+  },
+  "achievements": [
+    {
+      "title": "Graduate Record Examination",
+      "value": "331 / 340",
+      "detail": "Perfect 170 / 170 in Quantitative Reasoning."
+    },
+    {
+      "title": "JEE Advanced 2021",
+      "value": "AIR 2475",
+      "detail": "Among 1 million-plus candidates."
+    },
+    {
+      "title": "JEE Mains 2021",
+      "value": "AIR 2642",
+      "detail": "99.98 percentile in Physics."
+    }
+  ],
+  "schooling": [
+    {
+      "institution": "Georgia Institute of Technology",
+      "credential": "M.S. in Supply Chain Engineering",
+      "year": "2025 - 2026",
+      "score": "GPA 4.00 / 4.00"
+    },
+    {
+      "institution": "Indian Institute of Technology Madras",
+      "credential": "B.Tech in Mechanical Engineering",
+      "year": "2021 - 2025",
+      "score": "CGPA 8.15 / 10.00"
+    },
+    {
+      "institution": "Vyasa International School, Bangalore",
+      "credential": "CBSE Grade XII",
+      "year": "2021",
+      "score": "96.6 percent"
+    },
+    {
+      "institution": "Delhi Public School, Bangalore North",
+      "credential": "CBSE Grade X",
+      "year": "2019",
+      "score": "94.2 percent"
+    }
+  ],
+  "about": {
+    "sections": [
+      {
+        "title": "How I work",
+        "body": [
+          "I like work that starts with a messy system and ends with a structure that is clear enough to reason about, build, and improve.",
+          "That is true whether the problem is a mechanical linkage, a dining-hall forecast, a supply chain model, or a campus software product."
+        ]
+      },
+      {
+        "title": "What ties the projects together",
+        "body": [
+          "Across domains, the common thread is systems thinking: constraints, flow, decisions, interfaces, and implementation tradeoffs.",
+          "I care about turning abstract analysis into something that can be demonstrated, tested, or deployed."
+        ]
+      },
+      {
+        "title": "What this site is for",
+        "body": [
+          "This is not meant to be a compressed portfolio. It is meant to become a durable record of what I have built, how I thought, and how the work evolved.",
+          "The structure is intentionally designed so content can grow folder by folder while the frontend remains easy to restyle or extend."
+        ]
+      }
+    ]
+  },
+  "resume": {
+    "leadership": [
+      {
+        "title": "Academic Mentor",
+        "period": "Dec 2021 - Dec 2023",
+        "subtitle": "Avanti Fellows, Pondicherry Chapter",
+        "summary": "Supported underprivileged students through long-term academic mentoring, doubt clearing, and motivational support in a PAN-India education initiative.",
+        "bullets": [
+          "Mentored 50-plus underprivileged students in collaboration with 30 mentors.",
+          "Personally mentored one student for two years through the IIT admissions journey.",
+          "Ran 10-plus focused doubt-solving and motivation sessions for a small student cohort."
+        ],
+        "tags": [
+          "Mentorship",
+          "Education",
+          "Service"
+        ]
+      },
+      {
+        "title": "Finance and Operations Manager",
+        "period": "May 2022 - Apr 2023",
+        "subtitle": "Entrepreneurship Cell, IIT Madras",
+        "summary": "Ran operations and budgeting work for startup-facing events while coordinating fundraising and ecosystem outreach.",
+        "bullets": [
+          "Raised upwards of INR 250 million for more than 250 startups through a nationwide fundraiser competition.",
+          "Helped execute six startup meetups that connected 300-plus startups with VCs and enablers.",
+          "Led recruitment and training for 12 associate managers on budgeting and event coordination."
+        ],
+        "tags": [
+          "Operations",
+          "Finance",
+          "Leadership"
+        ]
+      }
+    ],
+    "extracurriculars": [
+      {
+        "title": "Drama Club Contingent Member",
+        "period": "Oct 2023 - Jul 2025",
+        "subtitle": "Sangam, IIT Madras",
+        "summary": "Worked as both performer and production collaborator across institute theatre, festival competition, and inter-IIT cultural stages.",
+        "bullets": [
+          "Performed as lead actor at Inter-IIT Culturals in 2023 and 2024.",
+          "Won second place at Saarang in an original mystery stage production.",
+          "Headed production work for an original comedy play that won first place at two major college festivals."
+        ],
+        "tags": [
+          "Performance",
+          "Production",
+          "Teamwork"
+        ]
+      },
+      {
+        "title": "Fashion Club Contingent Member",
+        "period": "Sep 2023 - Jul 2025",
+        "subtitle": "Sangam, IIT Madras",
+        "summary": "Part of the institute fashion contingent, contributing to team ramp walks and festival appearances across campuses.",
+        "bullets": [
+          "Selected into the 20-member fashion contingent at the institute.",
+          "Participated in annual festivals across the country through coordinated team performances."
+        ],
+        "tags": [
+          "Stage",
+          "Campus Life",
+          "Teamwork"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "title": "Software",
+        "items": [
+          "Excel and Macros",
+          "Gurobi",
+          "Capella",
+          "CATIA",
+          "AutoCAD",
+          "Fusion360",
+          "PowerBI",
+          "MATLAB",
+          "Bambu",
+          "Wokwi",
+          "Thonny"
+        ]
+      },
+      {
+        "title": "Languages",
+        "items": [
+          "Python",
+          "Visual Basic",
+          "Micropython",
+          "JavaScript",
+          "LaTeX",
+          "SQL",
+          "HTML"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "email": "adarshuday03@gmail.com",
+    "phone": "+1-470-376-1599",
+    "location": "Atlanta, USA",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/adarshuday",
+        "note": "Professional profile and current academic track."
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/adarshuday03",
+        "note": "Code repositories and future project sources."
+      },
+      {
+        "label": "Resume source",
+        "href": "/content/cv.tex",
+        "note": "Current LaTeX resume source used to seed the v1 homepage content."
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+this is my vision for how i would like my website to be. 
+first off, the frontend should ideally be very fluid, very modern and easy to access. it should be very cleanly coded, bifurcated, and easy for me to add on to or for anyone to view any part of my life with ease. 
+
+the main bifurcations are:
+- the home page, about me, short achievements, current mindset
+- MASTERS georgia tech experience (many projects, many caseworks, many courses within it)
+- BACHELORS iit madras experience (many many projects, many many courses and lots of stuff within it)
+- scholastic achievements and schooling 
+- contact me 
+
+the above is a very rough framework. within the categories, a proper chronological order of projects and work would be the best
+
+the tex file to my CV is in cv.tex (some parts missing and all projects are shortened to only two points so they don't encompass everything - but as we move on i will keep furnishing more content to include)
+
+a first pass through the cv would give an overall understanding and a global level of how we must plan this website's layout and proper bifurcations, and linkages, and clean coding for beautiful styled site.
+
+now, just to start us off SOMEWHERE, i have included content in btech_iitm\2022_sem3_kdom_project
+the entire context to the project is the exact text in the report as in btech_iitm\2022_sem3_kdom_project\kdom_project_report_text.txt
+
+this can be one starting page you can make, with your bifurcations and clean way of coding with beautiful css and stuff

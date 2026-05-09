@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2023-karnataka-socioeconomic-analysis",
+  "slug": "karnataka-socioeconomic-analysis-2023",
+  "title": "Socio-economic Analysis of Karnataka Prior to the 2023 State Elections",
+  "summary": "Produced a data-analytics internship study combining NREGA, UPI, and nightlights datasets to examine district and constituency-level socio-economic patterns in Karnataka.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2023,
+  "order": 1,
+  "semester": "Internship / Spring 2023",
+  "timeline": {
+    "start": "2023-02",
+    "end": "2023-04",
+    "label": "Feb 2023 - Apr 2023"
+  },
+  "course": {
+    "name": "Data Analytics Internship",
+    "mentor": "Indian School of Business / Centre for Analytical Finance"
+  },
+  "tags": [
+    "Data Analytics",
+    "Public Data",
+    "Google Earth Engine",
+    "Policy Research",
+    "JavaScript"
+  ],
+  "highlights": [
+    "Mapped 15-year NREGA data across 31 districts and examined five-year UPI transaction growth using PhonePe repositories.",
+    "Extracted nightlights data for more than 540 constituencies using Google Earth Engine.",
+    "Combined administrative, payments, and satellite datasets into one socio-economic reading of Karnataka ahead of the 2023 elections."
+  ],
+  "sections": [
+    {
+      "heading": "Research objective",
+      "body": [
+        "The internship focused on building a broad socio-economic view of Karnataka ahead of the 2023 state elections. The work needed to combine signals from different data sources rather than relying on a single indicator family.",
+        "That naturally pushed the project toward a multi-dataset analytics workflow covering labor, payments, and satellite proxies for development."
+      ]
+    },
+    {
+      "heading": "Administrative and transaction data",
+      "body": [
+        "One part of the study mapped 15 years of NREGA data across 31 districts, while another tracked five years of UPI transaction growth using PhonePe repositories. Together, those sources gave a longitudinal view of public-work participation and digital-transaction adoption.",
+        "The value of the work was in aligning multiple time scales and making them readable at the district level."
+      ]
+    },
+    {
+      "heading": "Geospatial layer",
+      "body": [
+        "Nightlights datasets were extracted for more than 540 constituencies using Google Earth Engine and its JavaScript-based environment. This added a spatial proxy for urbanization and economic activity that could complement the more administrative datasets.",
+        "Using satellite-derived signals alongside public records helped create a richer comparative picture of constituency-level variation."
+      ]
+    },
+    {
+      "heading": "Why it stands out",
+      "body": [
+        "This project is different from the manufacturing and mechanical work elsewhere in the archive because it shows the same systems instinct applied to public data. The emphasis was on stitching together heterogeneous sources into one interpretable view.",
+        "It also sharpened skills in data handling, geospatial tooling, and public-facing analytical framing."
+      ]
+    }
+  ],
+  "assets": []
+}

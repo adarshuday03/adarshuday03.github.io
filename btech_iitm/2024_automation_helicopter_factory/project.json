@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2024-helicopter-factory-simulation",
+  "slug": "helicopter-manufacturing-plant-simulation",
+  "title": "Helicopter Manufacturing Plant Simulation",
+  "summary": "Designed and simulated a helicopter assembly factory in Siemens Tecnomatix, combining production flow definition, bill-of-materials design, and cost analysis to study operational feasibility.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2024,
+  "order": 2,
+  "semester": "Semester 6",
+  "timeline": {
+    "start": "2024-02",
+    "end": "2024-05",
+    "label": "Feb 2024 - May 2024"
+  },
+  "course": {
+    "name": "Automation in Manufacturing",
+    "mentor": "Prof. G. L. Samuel"
+  },
+  "tags": [
+    "Manufacturing Systems",
+    "Simulation",
+    "Tecnomatix",
+    "Cost Analysis",
+    "Factory Design"
+  ],
+  "highlights": [
+    "Designed a helicopter assembly factory using Siemens Tecnomatix.",
+    "Defined production steps and factory flow for the assembly system.",
+    "Built a bill of materials and cost-analysis layer to assess profitability."
+  ],
+  "sections": [
+    {
+      "heading": "Factory as system",
+      "body": [
+        "The project framed helicopter assembly as a manufacturing-system design problem rather than as a single line-balancing exercise. The main task was to define how the factory should flow, what the production steps were, and how the assembly process should be structured spatially and operationally.",
+        "That required treating the plant as an integrated sequence of operations instead of a set of disconnected workstations."
+      ]
+    },
+    {
+      "heading": "Simulation environment",
+      "body": [
+        "Siemens Tecnomatix was used to model the factory and visualize the production process. The use of a manufacturing simulation environment made it possible to reason about factory flow, staging, and work progression more concretely than a spreadsheet-only workflow would allow.",
+        "This gave the project a direct manufacturing-systems flavor inside the IIT Madras portfolio."
+      ]
+    },
+    {
+      "heading": "Economic layer",
+      "body": [
+        "The work also included a bill of materials and a cost analysis so the plant design could be evaluated economically. That shifted the project from pure layout or automation planning toward a more decision-oriented factory study.",
+        "Profitability analysis made the output more complete because it linked production structure to financial viability."
+      ]
+    },
+    {
+      "heading": "Outcome",
+      "body": [
+        "The final result was a manufacturing case study that combined process mapping, simulation, and cost reasoning. It reflects the broader thread of taking engineering design beyond component-level work into system-level industrial planning.",
+        "It also set up a useful bridge to later facility and operations-design work."
+      ]
+    }
+  ],
+  "assets": []
+}

@@ -1,0 +1,63 @@
+{
+  "id": "gatech-2025-vital-vitamins-facility",
+  "slug": "vital-vitamins-pharmaceutical-facility-design",
+  "title": "Vital Vitamins Pharmaceutical Facility Design",
+  "summary": "Designed a high-throughput pharmaceutical facility using systems architecture, layout optimization, SKU-velocity analysis, and storage-strategy tradeoffs to balance capacity and capital cost.",
+  "institution": "masters",
+  "institutionLabel": "Georgia Tech",
+  "year": 2025,
+  "order": 1,
+  "semester": "Fall 2025",
+  "timeline": {
+    "start": "2025-09",
+    "end": "2025-12",
+    "label": "Sep 2025 - Dec 2025"
+  },
+  "course": {
+    "name": "Systems Design for Industrial Engineers",
+    "mentor": "Prof. Leon McGinnis"
+  },
+  "tags": [
+    "Facility Design",
+    "Systems Engineering",
+    "Storage Strategy",
+    "Python",
+    "Capella SysML"
+  ],
+  "highlights": [
+    "Designed a 173k sq ft facility with SysML on Capella.",
+    "Optimized the design to 610 pallets for 257k bottles per day, reporting a 92 percent footprint reduction.",
+    "Used SKU-velocity analysis in Python and chose conventional MHE over automation for 2.8 million dollars in CAPEX savings."
+  ],
+  "sections": [
+    {
+      "heading": "Facility scope",
+      "body": [
+        "The project approached a pharmaceutical site as a systems-design problem involving throughput, footprint, storage, and capital intensity. Rather than focusing only on one process area, the work aimed to align facility architecture with the operational profile of the product mix.",
+        "This made the design exercise strongly interdisciplinary: layout, systems modeling, and economic reasoning all mattered together."
+      ]
+    },
+    {
+      "heading": "Architecture and capacity",
+      "body": [
+        "The facility was designed in Capella using SysML, which helped express the system in a structured engineering framework rather than as a loose layout sketch. The design target reported in the resume was 610 pallets supporting 257k bottles per day.",
+        "A reported 92 percent footprint reduction shows how aggressively the design work focused on efficiency."
+      ]
+    },
+    {
+      "heading": "Storage strategy",
+      "body": [
+        "Python-based SKU-velocity analysis was used to choose a hybrid storage approach. That matters because facility design is rarely just about geometry; it depends heavily on how inventory actually behaves across velocity classes.",
+        "By grounding the storage decision in SKU behavior, the project made layout logic responsive to operating reality."
+      ]
+    },
+    {
+      "heading": "Tradeoff decision",
+      "body": [
+        "One of the key conclusions was to prioritize conventional material-handling equipment over automation, leading to a reported 2.8 million dollars in CAPEX savings. This shows the project was not biased toward automation for its own sake.",
+        "Instead, it treated technology choice as an economic and systems decision, which is exactly the kind of judgment the larger site is meant to surface."
+      ]
+    }
+  ],
+  "assets": []
+}

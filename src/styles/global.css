@@ -1,0 +1,647 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f0e5;
+  --bg-strong: #ede3d4;
+  --surface: rgba(255, 250, 241, 0.76);
+  --surface-strong: #fffaf2;
+  --ink: #171613;
+  --muted: #605b53;
+  --line: rgba(37, 31, 22, 0.12);
+  --shadow: 0 18px 60px rgba(51, 36, 17, 0.09);
+  --radius-xl: 1.75rem;
+  --radius-lg: 1.25rem;
+  --radius-md: 0.95rem;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.25rem;
+  --space-5: 1.75rem;
+  --space-6: 2.5rem;
+  --content-width: min(1180px, calc(100% - 2rem));
+  --accent: #345f72;
+  --accent-soft: rgba(52, 95, 114, 0.12);
+  --accent-strong: #234554;
+}
+
+[data-tone="bachelors"] {
+  --accent: #b76533;
+  --accent-soft: rgba(183, 101, 51, 0.12);
+  --accent-strong: #80431e;
+}
+
+[data-tone="masters"] {
+  --accent: #17657d;
+  --accent-soft: rgba(23, 101, 125, 0.12);
+  --accent-strong: #0e4a5d;
+}
+
+[data-tone="achievements"] {
+  --accent: #977523;
+  --accent-soft: rgba(151, 117, 35, 0.12);
+  --accent-strong: #6e5415;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(183, 101, 51, 0.09), transparent 26%),
+    var(--bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(70, 55, 37, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(70, 55, 37, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 92%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.site-main {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(16px);
+  background: rgba(246, 240, 229, 0.78);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.9rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mark {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.mark-name {
+  font-family: "Newsreader", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.mark-subtitle {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  padding: 0.52rem 0.85rem;
+  border-radius: 999px;
+  color: var(--muted);
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+}
+
+.site-footer-inner {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.25rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.home-hero,
+.project-hero {
+  margin-top: 1.5rem;
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(290px, 1fr);
+  gap: 1.2rem;
+}
+
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: "Newsreader", serif;
+  font-size: clamp(2.7rem, 5vw, 5.15rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.section-shell {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.page-intro {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 66ch;
+}
+
+.page-intro h1,
+.page-intro h2 {
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.page-intro p {
+  color: var(--muted);
+}
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.83rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.inline-chips,
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(37, 31, 22, 0.08);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.86rem;
+}
+
+.stat-grid,
+.link-grid,
+.entry-stack,
+.contact-list,
+.asset-section,
+.project-sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-card,
+.link-card,
+.timeline-node,
+.entry-card,
+.media-card,
+.file-card,
+.sidebar-card,
+.contact-card,
+.achievement-card,
+.school-card {
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.stat-value {
+  font-family: "Newsreader", serif;
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bullet-list {
+  padding-left: 1.15rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.55rem;
+}
+
+.compact li:last-child,
+.bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+.link-card {
+  display: grid;
+  gap: 0.45rem;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+}
+
+.link-card:hover,
+.link-card:focus-within {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(37, 31, 22, 0.18);
+}
+
+.timeline-grid,
+.achievement-grid,
+.school-grid,
+.media-grid,
+.file-grid,
+.skill-grid,
+.metric-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.achievement-grid,
+.school-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.file-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.metric-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.skill-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.entry-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.detail-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.entry-card-header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.entry-title {
+  font-family: "Newsreader", serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.inline-link::after {
+  content: "/>";
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.86em;
+}
+
+.metric-card,
+.skill-card {
+  padding: 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.skill-card {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
+  gap: 1rem;
+}
+
+.section-copy {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.section-copy article {
+  display: grid;
+  gap: 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.section-copy article:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.section-copy h3 {
+  font-size: 1.18rem;
+}
+
+.metadata-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.metadata-list div {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.metadata-list dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.metadata-list dd {
+  margin: 0;
+}
+
+.note {
+  color: var(--muted);
+}
+
+.hero-video,
+.media-card video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #171613;
+  border-radius: 1rem;
+}
+
+.hero-video {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.content-band {
+  padding: 1.2rem;
+}
+
+.breadcrumbs {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+  color: var(--accent-strong);
+}
+
+.empty-state {
+  padding: 1rem 1.15rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0.8rem;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.achievement-card h3,
+.school-card h3,
+.media-card h3,
+.file-card h3,
+.sidebar-card h3,
+.contact-card h3,
+.timeline-node h3,
+.link-card h3 {
+  font-size: 1.05rem;
+}
+
+.achievement-value {
+  font-family: "Newsreader", serif;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.home-highlight-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.66);
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(37, 31, 22, 0.18);
+}
+
+@media (max-width: 900px) {
+  .site-header-inner,
+  .site-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .home-hero,
+  .project-hero-grid,
+  .project-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

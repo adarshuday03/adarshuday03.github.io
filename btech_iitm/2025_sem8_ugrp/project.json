@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2025-sem8-ugrp-hydropower",
+  "slug": "micro-hydropower-from-hydram-wastewater",
+  "title": "Micro-Hydropower Generation from Waste Water of a Hydraulic Ram Pump",
+  "summary": "Explored a dual-purpose rural water-and-energy system by modifying a hydraulic ram pump to drive a Pelton turbine and evaluating the design through Python flow simulations.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2025,
+  "order": 5,
+  "semester": "Semester 8",
+  "timeline": {
+    "start": "2025-01",
+    "end": "2025-04",
+    "label": "Jan 2025 - Apr 2025"
+  },
+  "course": {
+    "name": "Undergraduate Research Project",
+    "mentor": "Prof. K. S. Reddy"
+  },
+  "tags": [
+    "Research",
+    "Energy Systems",
+    "Python Simulation",
+    "Fluid Mechanics",
+    "Mechanical Design"
+  ],
+  "highlights": [
+    "Designed a modified hydram with a Pelton turbine setup and achieved 63.54 percent D'Aubuisson efficiency in 2-D Python flow simulations.",
+    "Estimated 25 to 30 W of micro-hydropower from wastewater flow under different penstock lengths, nozzle diameters, and flow rates.",
+    "Positioned the work as a dual-purpose system for water delivery and decentralized energy access."
+  ],
+  "sections": [
+    {
+      "heading": "Problem framing",
+      "body": [
+        "The project focused on whether a hydraulic ram pump could be extended beyond water delivery into a small but meaningful energy-generation system. The goal was to use wastewater from the pumping process instead of treating it as a pure loss.",
+        "That framing made the work less about a single device and more about a dual-purpose infrastructure concept for water and energy access in constrained settings."
+      ]
+    },
+    {
+      "heading": "System concept",
+      "body": [
+        "The proposed configuration paired a modified hydram with a Pelton turbine so the discharge stream could be redirected into useful power generation. That required thinking about the hydraulic behavior of the system as an integrated flow-and-conversion problem rather than as two separate devices.",
+        "The design work centered on the practical interaction between head, nozzle geometry, and the turbine-facing side of the system."
+      ]
+    },
+    {
+      "heading": "Simulation and parameter study",
+      "body": [
+        "A 2-D Python simulation framework was used to study the effect of penstock length, nozzle diameter, and flow-rate combinations on the system. The reported D'Aubuisson efficiency reached 63.54 percent under the modeled setup.",
+        "The simulations were used to estimate a micro-hydropower range of roughly 25 to 30 W, which gave the project a clear feasibility window instead of a purely conceptual outcome."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "body": [
+        "The value of the project was in showing how wastewater from a mechanical pumping system could become a second output rather than a discarded byproduct. That systems view fits the larger theme of extracting more utility from constrained infrastructure.",
+        "It also created a strong foundation for future work involving physical prototyping, optimization of losses, and field-oriented operating assumptions."
+      ]
+    }
+  ],
+  "assets": []
+}

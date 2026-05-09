@@ -1,0 +1,63 @@
+{
+  "id": "iitm-2024-sem7-freecycle",
+  "slug": "freecycle-buy-and-sell-platform",
+  "title": "Freecycle - Institute Buy-and-Sell Website",
+  "summary": "Designed and deployed a campus buy-and-sell platform after user research with students, using a React, Node.js, and MongoDB stack to support reuse and low-friction transactions.",
+  "institution": "bachelors",
+  "institutionLabel": "IIT Madras",
+  "year": 2024,
+  "order": 3,
+  "semester": "Semester 7",
+  "timeline": {
+    "start": "2024-09",
+    "end": "2024-11",
+    "label": "Sep 2024 - Nov 2024"
+  },
+  "course": {
+    "name": "Life of Ubiquitous Materials: From Science to Behavior",
+    "mentor": "Prof. L. Kundanati and Prof. S. G. Prasath"
+  },
+  "tags": [
+    "Software Product",
+    "React",
+    "Node.js",
+    "MongoDB",
+    "User Research"
+  ],
+  "highlights": [
+    "Built a React, Node.js, and MongoDB campus marketplace informed by 200-plus student surveys.",
+    "Implemented filters, categories, and secure communication for everyday reuse transactions.",
+    "Deployed the system on Netlify and Render and piloted it with the Sustainability Club."
+  ],
+  "sections": [
+    {
+      "heading": "Problem framing",
+      "body": [
+        "The project started from a campus reuse problem: useful goods existed, but there was no dedicated institute-facing product to help students exchange them cleanly. The work therefore began with student behavior rather than with the tech stack.",
+        "More than 200 student surveys helped shape what the product needed to support, making the platform a response to observed user friction instead of a speculative app."
+      ]
+    },
+    {
+      "heading": "Product and stack",
+      "body": [
+        "The implementation used React on the frontend with Node.js and MongoDB on the backend side. Core product decisions included filters, category organization, and secure communication between users so listings could be browsed and acted on with low friction.",
+        "This made the project a full software product exercise rather than a UI-only prototype."
+      ]
+    },
+    {
+      "heading": "Deployment",
+      "body": [
+        "The application was hosted using Netlify and Render so it could be tested in a real deployment environment. That mattered because the platform was intended for live campus use, not just offline presentation.",
+        "The deployment decision also helped prove the product could sustain real-time updates and multi-user interaction."
+      ]
+    },
+    {
+      "heading": "Campus relevance",
+      "body": [
+        "Piloting the work with the Sustainability Club linked the product to a real campus organization and a plausible adoption path. That gave the project a broader systems angle involving sustainability, behavior change, and digital infrastructure.",
+        "It remains one of the clearest bridges between campus problem-finding and software execution in the archive."
+      ]
+    }
+  ],
+  "assets": []
+}

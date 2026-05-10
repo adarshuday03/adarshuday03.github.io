@@ -27,17 +27,17 @@
   ],
   "person": {
     "name": "Adarsh Uday",
-    "title": "Mechanical engineer turned systems and supply chain builder",
+    "title": "Engineer across physical systems, supply chains, and digital products",
     "location": "Atlanta, USA",
     "intro": [
-      "I build systems across physical engineering, operations research, and digital products.",
-      "This site is a living archive of my work, from mechanism design at IIT Madras to supply chain modeling at Georgia Tech."
+      "I work where physical engineering, operations thinking, and digital execution meet.",
+      "From IIT Madras to Georgia Tech, the throughline is the same: build systems that are clear, useful, and hard to ignore."
     ],
-    "currentMindset": "Build rigorously, explain clearly, and make complex systems legible.",
+    "currentMindset": "Clarity over noise. Rigor without flatness.",
     "currentFocus": [
-      "M.S. in Supply Chain Engineering at Georgia Tech with a 4.0 GPA.",
-      "Turning resume shorthand into full technical case studies with media, decisions, and outcomes.",
-      "Designing this site as a navigable digital embodiment rather than a static portfolio."
+      "M.S. in Supply Chain Engineering at Georgia Tech.",
+      "Expanding engineering, analytics, and product work into sharper case studies.",
+      "Interested in systems that connect physical operations, decision models, and usable interfaces."
     ]
   },
   "home": {
@@ -87,7 +87,7 @@
       "headline": "Georgia Tech - M.S. in Supply Chain Engineering",
       "summary": [
         "The Georgia Tech track is centered on quantitative decision-making, systems design, and operations strategy.",
-        "The site foundation now treats each course project as a manifest-backed case study, so deeper folders, assets, and revisions can be added later without touching the routing layer."
+        "The projects here move from dining demand and network monitoring to stochastic inventory and facility design."
       ],
       "stats": [
         {
@@ -103,8 +103,8 @@
           "value": "4.00 / 4.00"
         },
         {
-          "label": "Scaffold status",
-          "value": "Full project pages ready"
+          "label": "Current standing",
+          "value": "4 projects live"
         }
       ],
       "focusAreas": [
@@ -113,13 +113,13 @@
         "Stochastic inventory strategy under uncertainty",
         "Facility systems design and storage strategy"
       ],
-      "buildNote": "Each Georgia Tech case study now lives in its own folder under ms_gatech so more detailed artifacts can be added without restructuring the site."
+      "buildNote": "The strongest themes right now are demand, networks, uncertainty, and facility systems."
     },
     "bachelors": {
       "headline": "IIT Madras - B.Tech in Mechanical Engineering",
       "summary": [
         "The IIT Madras side of the archive spans mechanism design, manufacturing systems, undergraduate research, entrepreneurship, campus product building, and embedded prototyping.",
-        "The section is now structured around manifest-backed project pages for the main academic and research work, while leadership and extracurricular material remains editable from site content."
+        "It spans mechanisms, manufacturing systems, prosthetics, analytics, and campus-built software."
       ],
       "stats": [
         {
@@ -145,7 +145,7 @@
         "Applied analytics and forecasting",
         "Embedded systems, biomechanics, and campus software products"
       ],
-      "buildNote": "Leadership, extracurriculars, and skills stay in site-content, while academic and research work is scaffolded as canonical project folders under btech_iitm."
+      "buildNote": "The academic work sits alongside leadership, extracurricular life, and early product experiments from the IIT Madras years."
     }
   },
   "achievements": [
@@ -208,10 +208,10 @@
         ]
       },
       {
-        "title": "What this site is for",
+        "title": "Why this site exists",
         "body": [
-          "This is not meant to be a compressed portfolio. It is meant to become a durable record of what I have built, how I thought, and how the work evolved.",
-          "The structure is intentionally designed so content can grow folder by folder while the frontend remains easy to restyle or extend."
+          "I want the work to live at full resolution instead of being flattened into resume bullets.",
+          "Over time each project page should show the decisions, tradeoffs, artifacts, and outcomes behind the line items."
         ]
       }
     ]

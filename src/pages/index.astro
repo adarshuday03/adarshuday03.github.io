@@ -1,136 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import EntryCard from "../components/EntryCard.astro";
-import PageIntro from "../components/PageIntro.astro";
-import { getProjectBySlug, loadSiteData } from "../lib/content";
+import { loadSiteData } from "../lib/content";
 
 const site = loadSiteData();
-const featuredProject = site.home.featuredProjectSlug
-  ? getProjectBySlug(site.home.featuredProjectSlug)
-  : undefined;
-
-const heroSignals = ["Mechanical systems", "Operations research", "Digital products"];
-
-const homeTones = {
-  "/masters/": "masters",
-  "/bachelors/": "bachelors",
-  "/achievements/": "achievements"
-} as const;
-
-const homePaths = site.home.highlightSections.map((section) => ({
-  ...section,
-  tone: homeTones[section.href as keyof typeof homeTones] ?? "home"
-}));
-
-function compactMeta(items: Array<string | undefined>) {
-  return items.filter((item): item is string => Boolean(item));
-}
+const heroCards = site.home.heroCards;
 ---
 
 <BaseLayout
   title={site.person.name}
-  description="A living archive of Adarsh Uday's work across engineering, supply chain systems, and digital products."
+  description="Adarsh Uday. Supply chain engineering and mechanical engineering work from IIT Madras to Georgia Tech."
   sectionTone="home"
 >
-  <section class="home-hero home-hero--modern panel">
-    <div class="hero-copy">
-      <p class="eyebrow">Engineering x systems x product</p>
+  <section class="home-hero home-hero--minimal panel">
+    <div class="hero-copy hero-copy--minimal">
       <h1 class="display">{site.person.name}</h1>
       <p class="hero-kicker">{site.person.title}</p>
       <p class="lede">{site.person.intro[0]}</p>
-
-      <div class="signal-row">
-        {heroSignals.map((signal) => (
-          <span class="signal-pill">{signal}</span>
-        ))}
-      </div>
-
-      <div class="section-actions">
-        <a class="button-link button-link--primary" href="/masters/">Explore Georgia Tech</a>
-        <a class="button-link" href="/bachelors/">Explore IIT Madras</a>
-        {featuredProject && (
-          <a class="button-link button-link--ghost" href={featuredProject.href}>Open a case study</a>
-        )}
-      </div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <article class="hero-card hero-card-main">
-        <p class="mono">Current base</p>
-        <h2>{site.person.location}</h2>
-        <p>{site.person.currentFocus[0]}</p>
-      </article>
-
-      <article class="hero-card hero-card-secondary">
-        <p class="mono">Range</p>
-        <p>Mechanism design, manufacturing systems, forecasting, optimization, and student-built software.</p>
-      </article>
-
-      <article class="hero-card hero-card-tertiary">
-        <p class="mono">Direction</p>
-        <p>Georgia Tech now, IIT Madras roots, and a body of work that moves across systems, decisions, and build.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section-shell">
-    <PageIntro eyebrow="Explore" title="Choose a direction" summary="Start with the track you want to see first." level="h2" />
-
-    <div class="home-path-grid">
-      {homePaths.map((section) => (
-        <a class="path-card" data-tone={section.tone} href={section.href}>
-          <div class="path-card-head">
-            <p class="mono">{section.title}</p>
-            <span class="inline-link">Open</span>
-          </div>
-          <p>{section.summary}</p>
-        </a>
+    <div class="hero-visual hero-visual--minimal">
+      {heroCards.map((card, index) => (
+        <article class:list={["hero-card", { "hero-card-main": index === 0, "hero-card-secondary": index === 1, "hero-card-tertiary": index === 2 }]}>
+          <p class="mono">{card.label}</p>
+          {card.title && <h2>{card.title}</h2>}
+          <p>{card.body}</p>
+        </article>
       ))}
-    </div>
-  </section>
-
-  {featuredProject && (
-    <section class="section-shell section-shell--feature">
-      <div class="feature-shell panel">
-        <div class="feature-copy">
-          <p class="eyebrow">Start here</p>
-          <h2>One project, built end to end</h2>
-          <p class="note">
-            The first fully built page follows a constrained four-bar mechanism from synthesis and CAD through prototype, motion study, and report.
-          </p>
-        </div>
-
-        <EntryCard
-          title={featuredProject.title}
-          meta={compactMeta([
-            featuredProject.timeline.label,
-            featuredProject.course.name,
-            featuredProject.course.mentor
-          ])}
-          summary={featuredProject.summary}
-          bullets={featuredProject.highlights}
-          tags={featuredProject.tags}
-          href={featuredProject.href}
-          ctaLabel="Open project page"
-        />
-      </div>
-    </section>
-  )}
-
-  <section class="section-shell">
-    <div class="panel content-band">
-      <PageIntro
-        eyebrow="Current focus"
-        title="What is active right now"
-        summary="The threads that are most alive in the work at the moment."
-        level="h2"
-      />
-
-      <div class="home-highlight-list">
-        {site.person.currentFocus.map((item) => (
-          <p class="note">{item}</p>
-        ))}
-      </div>
     </div>
   </section>
 </BaseLayout>

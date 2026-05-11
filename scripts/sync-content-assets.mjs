@@ -6,6 +6,7 @@ const rootDir = fileURLToPath(new URL("../", import.meta.url));
 const publicContentDir = path.join(rootDir, "public", "content");
 const contentRoots = ["btech_iitm", "ms_gatech", "achievements"];
 const publishedRootFiles = ["cv.tex"];
+const siteContentPath = path.join(rootDir, "site-content", "site.json");
 
 function walkForManifests(directory) {
   if (!existsSync(directory)) {
@@ -54,12 +55,63 @@ function copyManifestAssets(manifestPath) {
   }
 }
 
+function collectSiteAssetPaths(siteData) {
+  const assetPaths = [];
+
+  for (const institution of Object.values(siteData.institutions ?? {})) {
+    if (institution.logo?.path) {
+      assetPaths.push(institution.logo.path);
+    }
+
+    for (const media of institution.heroMedia ?? []) {
+      if (media.path) {
+        assetPaths.push(media.path);
+      }
+    }
+  }
+
+  return [...new Set(assetPaths)];
+}
+
+function resolveRepoRelativePath(relativePath) {
+  const normalizedPath = path.normalize(relativePath);
+  const absolutePath = path.join(rootDir, normalizedPath);
+  const resolvedRelativePath = path.relative(rootDir, absolutePath);
+
+  if (resolvedRelativePath.startsWith("..") || path.isAbsolute(resolvedRelativePath)) {
+    throw new Error(`Invalid site asset path outside repository root: ${relativePath}`);
+  }
+
+  return {
+    sourcePath: absolutePath,
+    relativePath: resolvedRelativePath
+  };
+}
+
+function copySiteAsset(relativePath) {
+  const { sourcePath, relativePath: resolvedRelativePath } = resolveRepoRelativePath(relativePath);
+
+  if (!existsSync(sourcePath)) {
+    throw new Error(`Missing site asset referenced in site-content/site.json: ${relativePath}`);
+  }
+
+  const destinationPath = path.join(publicContentDir, resolvedRelativePath);
+  mkdirSync(path.dirname(destinationPath), { recursive: true });
+  cpSync(sourcePath, destinationPath);
+}
+
 rmSync(publicContentDir, { recursive: true, force: true });
 
 const manifestPaths = contentRoots.flatMap((folder) => walkForManifests(path.join(rootDir, folder)));
+const siteData = loadManifest(siteContentPath);
+const siteAssetPaths = collectSiteAssetPaths(siteData);
 
 for (const manifestPath of manifestPaths) {
   copyManifestAssets(manifestPath);
+}
+
+for (const assetPath of siteAssetPaths) {
+  copySiteAsset(assetPath);
 }
 
 for (const fileName of publishedRootFiles) {
@@ -73,4 +125,4 @@ for (const fileName of publishedRootFiles) {
   cpSync(sourcePath, path.join(publicContentDir, fileName));
 }
 
-console.log(`Copied assets for ${manifestPaths.length} project manifest(s).`);
+console.log(`Copied assets for ${manifestPaths.length} project manifest(s) and ${siteAssetPaths.length} site asset(s).`);

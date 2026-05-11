@@ -1,0 +1,73 @@
+---
+import type { InstitutionHeroMedia, SiteAssetReference } from "../lib/content";
+import { getContentAssetPublicPath } from "../lib/content";
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  summary?: string | string[];
+  logo?: SiteAssetReference;
+  media?: InstitutionHeroMedia[];
+}
+
+const { eyebrow, title, summary, logo, media = [] } = Astro.props;
+const paragraphs = Array.isArray(summary) ? summary : summary ? [summary] : [];
+const primaryMedia = media.find((item) => item.layout === "primary") ?? media[0];
+const secondaryMedia = media.filter((item) => item !== primaryMedia).slice(0, 2);
+---
+
+<div class="institution-hero panel">
+  <div class="institution-hero-copy page-intro page-intro--wide">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {paragraphs.map((paragraph) => (
+      <p>{paragraph}</p>
+    ))}
+  </div>
+
+  {(primaryMedia || logo) && (
+    <div class="institution-stage">
+      {primaryMedia ? (
+        <div class="institution-media-mosaic">
+          <figure class="institution-media institution-media--primary">
+            <img
+              src={getContentAssetPublicPath(primaryMedia.path)}
+              alt={primaryMedia.alt}
+              loading="eager"
+              decoding="async"
+              style={primaryMedia.objectPosition ? `object-position: ${primaryMedia.objectPosition};` : undefined}
+            />
+            {primaryMedia.caption && <figcaption>{primaryMedia.caption}</figcaption>}
+          </figure>
+
+          {secondaryMedia.map((item, index) => (
+            <figure class:list={["institution-media", "institution-media--secondary", { "institution-media--tertiary": index === 1 }]}>
+              <img
+                src={getContentAssetPublicPath(item.path)}
+                alt={item.alt}
+                loading="eager"
+                decoding="async"
+                style={item.objectPosition ? `object-position: ${item.objectPosition};` : undefined}
+              />
+              {item.caption && <figcaption>{item.caption}</figcaption>}
+            </figure>
+          ))}
+
+          {logo && (
+            <div class="institution-logo-dock institution-logo-dock--overlay">
+              <img src={getContentAssetPublicPath(logo.path)} alt={logo.alt} loading="eager" decoding="async" />
+            </div>
+          )}
+        </div>
+      ) : (
+        <div class="institution-logo-stage">
+          {logo && (
+            <div class="institution-logo-dock institution-logo-dock--stage">
+              <img src={getContentAssetPublicPath(logo.path)} alt={logo.alt} loading="eager" decoding="async" />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )}
+</div>

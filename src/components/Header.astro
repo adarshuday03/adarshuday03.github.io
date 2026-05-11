@@ -1,4 +1,6 @@
 ---
+import { loadSiteData } from "../lib/content";
+
 interface NavItem {
   label: string;
   href: string;
@@ -10,6 +12,7 @@ interface Props {
 }
 
 const { navigation, currentPath } = Astro.props;
+const site = loadSiteData();
 
 const normalizedPath = currentPath === "/" ? "/" : currentPath.replace(/\/$/, "");
 
@@ -28,7 +31,7 @@ function isActive(href: string) {
   <div class="site-header-inner">
     <a class="mark" href="/">
       <span class="mark-name">Adarsh Uday</span>
-      <span class="mark-subtitle">systems / engineering / product</span>
+      <span class="mark-subtitle">{site.person.headerLabel ?? site.person.title}</span>
     </a>
 
     <nav class="nav-links" aria-label="Primary">

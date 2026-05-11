@@ -27,21 +27,37 @@
   ],
   "person": {
     "name": "Adarsh Uday",
-    "title": "Engineer across physical systems, supply chains, and digital products",
+    "title": "Supply Chain Engineer x Mechanical Engineer",
     "location": "Atlanta, USA",
     "intro": [
-      "I work where physical engineering, operations thinking, and digital execution meet.",
-      "From IIT Madras to Georgia Tech, the throughline is the same: build systems that are clear, useful, and hard to ignore."
+      "I am a supply chain engineer and mechanical engineer building a clearer record of work from IIT Madras to Georgia Tech.",
+      "The front page stays minimal for now. The project pages and institution sections will keep growing into a fuller archive."
     ],
-    "currentMindset": "Clarity over noise. Rigor without flatness.",
+    "headerLabel": "supply chain / mechanical",
+    "currentMindset": "Clarity over noise. Rigor over posturing.",
     "currentFocus": [
       "M.S. in Supply Chain Engineering at Georgia Tech.",
-      "Expanding engineering, analytics, and product work into sharper case studies.",
-      "Interested in systems that connect physical operations, decision models, and usable interfaces."
+      "Expanding the archive into sharper coursework, project, and research pages.",
+      "Interested in operations, manufacturing, forecasting, optimization, and decision-focused engineering."
     ]
   },
   "home": {
     "featuredProjectSlug": "constrained-four-bar-mechanism",
+    "heroCards": [
+      {
+        "label": "Current base",
+        "title": "Atlanta, USA",
+        "body": "M.S. in Supply Chain Engineering at Georgia Tech."
+      },
+      {
+        "label": "Range",
+        "body": "Supply chain engineering, mechanical engineering, manufacturing, forecasting, optimization, operations analysis, and case-study work."
+      },
+      {
+        "label": "Direction",
+        "body": "Keep the homepage spare, build the archive steadily, and turn work from Georgia Tech and IIT Madras into sharper case studies over time."
+      }
+    ],
     "highlightSections": [
       {
         "title": "Georgia Tech",
@@ -51,7 +67,7 @@
       {
         "title": "IIT Madras",
         "href": "/bachelors/",
-        "summary": "Mechanical design, manufacturing systems, embedded research, campus product building, and leadership across the B.Tech years."
+        "summary": "Mechanical design, manufacturing systems, embedded research, campus software building, and leadership across the B.Tech years."
       },
       {
         "title": "Achievements and Schooling",
@@ -63,7 +79,7 @@
       {
         "year": "2025 - 2026",
         "label": "Georgia Tech",
-        "description": "Supply Chain Engineering projects in operations research, stochastic modeling, and systems design."
+        "description": "Supply Chain Engineering projects in operations research, stochastic modeling, and facility design."
       },
       {
         "year": "2021 - 2025",
@@ -72,7 +88,7 @@
       },
       {
         "year": "2024",
-        "label": "From products to systems",
+        "label": "From builds to broader operations",
         "description": "Built software and analytics work alongside prosthetics research and manufacturing optimization."
       },
       {
@@ -85,8 +101,13 @@
   "institutions": {
     "masters": {
       "headline": "Georgia Tech - M.S. in Supply Chain Engineering",
+      "logo": {
+        "path": "ms_gatech/gt_images/gt.png",
+        "alt": "Georgia Tech logo"
+      },
+      "heroMedia": [],
       "summary": [
-        "The Georgia Tech track is centered on quantitative decision-making, systems design, and operations strategy.",
+        "The Georgia Tech track is centered on quantitative decision-making, operations strategy, and engineering analysis.",
         "The projects here move from dining demand and network monitoring to stochastic inventory and facility design."
       ],
       "stats": [
@@ -117,8 +138,26 @@
     },
     "bachelors": {
       "headline": "IIT Madras - B.Tech in Mechanical Engineering",
+      "logo": {
+        "path": "btech_iitm/iitm_images/iitm.png",
+        "alt": "IIT Madras logo"
+      },
+      "heroMedia": [
+        {
+          "path": "btech_iitm/iitm_images/iitm_degree_receiving_pic.JPEG",
+          "alt": "Adarsh Uday receiving his degree at IIT Madras",
+          "caption": "Degree ceremony at IIT Madras",
+          "layout": "primary"
+        },
+        {
+          "path": "btech_iitm/iitm_images/iitm_btech_casual_ethnic_pic.JPG",
+          "alt": "Adarsh Uday in traditional attire at IIT Madras",
+          "caption": "Portrait from the IIT Madras years",
+          "layout": "secondary"
+        }
+      ],
       "summary": [
-        "The IIT Madras side of the archive spans mechanism design, manufacturing systems, undergraduate research, entrepreneurship, campus product building, and embedded prototyping.",
+        "The IIT Madras side of the archive spans mechanism design, manufacturing systems, undergraduate research, entrepreneurship, campus initiatives, and embedded prototyping.",
         "It spans mechanisms, manufacturing systems, prosthetics, analytics, and campus-built software."
       ],
       "stats": [
@@ -143,9 +182,9 @@
         "Mechanism design and physical prototyping",
         "Manufacturing systems and plant simulation",
         "Applied analytics and forecasting",
-        "Embedded systems, biomechanics, and campus software products"
+        "Embedded systems, biomechanics, and campus software builds"
       ],
-      "buildNote": "The academic work sits alongside leadership, extracurricular life, and early product experiments from the IIT Madras years."
+      "buildNote": "The academic work sits alongside leadership, extracurricular life, and early software and operations experiments from the IIT Madras years."
     }
   },
   "achievements": [
@@ -197,13 +236,13 @@
         "title": "How I work",
         "body": [
           "I like work that starts with a messy system and ends with a structure that is clear enough to reason about, build, and improve.",
-          "That is true whether the problem is a mechanical linkage, a dining-hall forecast, a supply chain model, or a campus software product."
+          "That is true whether the problem is a mechanical linkage, a dining-hall forecast, a supply chain model, or a campus software build."
         ]
       },
       {
         "title": "What ties the projects together",
         "body": [
-          "Across domains, the common thread is systems thinking: constraints, flow, decisions, interfaces, and implementation tradeoffs.",
+          "Across domains, the common thread is working through constraints, flow, decisions, interfaces, and implementation tradeoffs.",
           "I care about turning abstract analysis into something that can be demonstrated, tested, or deployed."
         ]
       },

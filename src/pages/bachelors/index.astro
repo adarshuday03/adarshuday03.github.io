@@ -1,23 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import EntryCard from "../../components/EntryCard.astro";
+import InstitutionHero from "../../components/InstitutionHero.astro";
 import PageIntro from "../../components/PageIntro.astro";
 import { getProjectsByInstitution, loadSiteData } from "../../lib/content";
 
 const site = loadSiteData();
+const section = site.institutions.bachelors;
 const projects = getProjectsByInstitution("bachelors");
 ---
 
-<BaseLayout title="Bachelors" description={site.institutions.bachelors.summary[0]} sectionTone="bachelors">
+<BaseLayout title="Bachelors" description={section.summary[0]} sectionTone="bachelors">
   <section class="section-shell">
-    <PageIntro
+    <InstitutionHero
       eyebrow="IIT Madras"
-      title={site.institutions.bachelors.headline}
-      summary={site.institutions.bachelors.summary}
+      title={section.headline}
+      summary={section.summary}
+      logo={section.logo}
+      media={section.heroMedia}
     />
 
     <div class="metric-grid">
-      {site.institutions.bachelors.stats.map((stat) => (
+      {section.stats.map((stat) => (
         <article class="metric-card">
           <p class="mono">{stat.label}</p>
           <p>{stat.value}</p>
@@ -26,12 +30,12 @@ const projects = getProjectsByInstitution("bachelors");
     </div>
 
     <div class="tag-row">
-      {site.institutions.bachelors.focusAreas.map((focusArea) => (
+      {section.focusAreas.map((focusArea) => (
         <span class="tag">{focusArea}</span>
       ))}
     </div>
 
-    <div class="empty-state">{site.institutions.bachelors.buildNote}</div>
+    <div class="empty-state">{section.buildNote}</div>
   </section>
 
   <section class="section-shell">

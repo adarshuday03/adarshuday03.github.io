@@ -20,6 +20,12 @@ export interface SiteHighlightSection {
   summary: string;
 }
 
+export interface HomeHeroCard {
+  label: string;
+  title?: string;
+  body: string;
+}
+
 export interface SiteTimelineEntry {
   year: string;
   label: string;
@@ -36,8 +42,21 @@ export interface ResumeEntry {
   href?: string;
 }
 
+export interface SiteAssetReference {
+  path: string;
+  alt: string;
+}
+
+export interface InstitutionHeroMedia extends SiteAssetReference {
+  caption?: string;
+  layout?: "primary" | "secondary";
+  objectPosition?: string;
+}
+
 export interface InstitutionSummary {
   headline: string;
+  logo?: SiteAssetReference;
+  heroMedia?: InstitutionHeroMedia[];
   summary: string[];
   stats: SiteMetric[];
   focusAreas: string[];
@@ -80,11 +99,13 @@ export interface SiteData {
     title: string;
     location: string;
     intro: string[];
+    headerLabel?: string;
     currentMindset: string;
     currentFocus: string[];
   };
   home: {
     featuredProjectSlug?: string;
+    heroCards: HomeHeroCard[];
     highlightSections: SiteHighlightSection[];
     timelinePreview: SiteTimelineEntry[];
   };
@@ -202,6 +223,10 @@ function walkForProjectManifests(directory: string): string[] {
 
 function normalizeWebPath(...segments: string[]): string {
   return `/${segments.join("/").replace(/\\/g, "/")}`;
+}
+
+export function getContentAssetPublicPath(relativePath: string): string {
+  return normalizeWebPath("content", relativePath);
 }
 
 function loadProjectManifest(manifestPath: string): LoadedProject {
